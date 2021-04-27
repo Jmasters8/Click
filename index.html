@@ -28,7 +28,21 @@
   <canvas id="gameScreen" width="1000" height="1000"></canvas>
   <canvas id="text" width="100" height="100"></canvas>
 
-  
+  <script allow="autoplay" playsinline="true" autoplay="" muted="muted">
+    let audio = new Audio('/songs/Cascada.mp3');
+    audio.volume = 0.2
+    let count = 0;
+    function playAudio() {
+      if (count === 0) {
+        count = 1;
+        audio.play()
+      } else {
+        count = 0;
+        audio.pause()
+      }
+    }
+
+  </script>
   <script type="module" src="src/index.js"></script>
   
 </body>

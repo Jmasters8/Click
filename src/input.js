@@ -1,11 +1,21 @@
+import { checkFire } from './checkFire.js'
+
 export default class InputHandler {
-  constructor(leftArrow) {
+  constructor(fallingLeftArrow, game) {
 
     document.addEventListener('keydown', event => {
-      if (event.keyCode === 37) {
-        leftArrow.fire();
+      switch (event.keyCode) {
+        case 37:
+          fallingLeftArrow.fire()
+          break;
+        case 27:
+          game.togglePause();
+          break;
+        case 32:
+          event.preventDefault()
+          game.start();
+          break;
       }
-      // alert(event.keyCode);
     })
   }
 }
