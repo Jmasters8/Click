@@ -175,7 +175,7 @@ export default class Game {
       new FallingUpArrow(this, {x: 275, y: -20940}, this.upArrow), //203
       new FallingUpArrow(this, {x: 275, y: -22190}, this.upArrow) //219
     ];
-
+//2
 
     // for (let i = 1; i < 2; i++) {
     //   fallingUpArrows.push(new FallingUpArrow(this, {x: 275, y: i * -600}, this.upArrow))
