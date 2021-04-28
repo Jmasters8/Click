@@ -1,17 +1,17 @@
-import UpArrow from '/src/upArrow.js';
-import RightArrow from '/src/rightArrow.js';
-import LeftArrow from '/src/leftArrow.js';
-import DownArrow from '/src/downArrow.js';
+import UpArrow from './upArrow.js';
+import RightArrow from './rightArrow.js';
+import LeftArrow from './leftArrow.js';
+import DownArrow from './downArrow.js';
 
-import GameInputHandler from '/src//inputHandlers/gameInput.js';
-import FallingLeftArrow from '/src/fallingLeftArrow.js';
-import FallingUpArrow from '/src/fallingUpArrow.js';
-import FallingDownArrow from '/src/fallingDownArrow.js';
-import FallingRightArrow from '/src/fallingRightArrow.js';
-import LeftArrowInputHandler from '/src/inputHandlers/leftArrowInput.js';
-import UpArrowInputHandler from '/src/inputHandlers/upArrowInput.js';
-import DownArrowInputHandler from '/src/inputHandlers/downArrowInput.js';
-import RightArrowInputHandler from '/src/inputHandlers/rightArrowInput.js';
+import GameInputHandler from './inputHandlers/gameInput.js';
+import FallingLeftArrow from './fallingLeftArrow.js';
+import FallingUpArrow from './fallingUpArrow.js';
+import FallingDownArrow from './fallingDownArrow.js';
+import FallingRightArrow from './fallingRightArrow.js';
+import LeftArrowInputHandler from './inputHandlers/leftArrowInput.js';
+import UpArrowInputHandler from './inputHandlers/upArrowInput.js';
+import DownArrowInputHandler from './inputHandlers/downArrowInput.js';
+import RightArrowInputHandler from './inputHandlers/rightArrowInput.js';
 import { checkFire } from './checkFire.js'
 
 const GAMESTATE = {
