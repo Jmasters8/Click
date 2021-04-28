@@ -47,7 +47,7 @@ export default class FallingLeftArrow {
 
 
   fireRightArrow() {
-    if ((this.rightArrow.position.y - this.position.y) < 30 && (this.rightArrow.position.y - this.position.y) > -30) {
+    if ((this.rightArrow.position.y - this.position.y) < 38 && (this.rightArrow.position.y - this.position.y) > -38) {
       // console.log(this.leftArrow.position.y - this.position.y)
       console.log('success')
       this.game.score ++
