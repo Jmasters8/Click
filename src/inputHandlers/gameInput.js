@@ -1,13 +1,11 @@
-import { checkFire } from './checkFire.js'
-
-export default class InputHandler {
-  constructor(fallingLeftArrow, game) {
+export default class GameInputHandler {
+  constructor(game) {
 
     document.addEventListener('keydown', event => {
       switch (event.keyCode) {
-        case 37:
-          fallingLeftArrow.fire()
-          break;
+        // case 37:
+        //   fallingLeftArrow.fire()
+        //   break;
         case 27:
           game.togglePause();
           break;

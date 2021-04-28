@@ -1,14 +1,18 @@
 export default class LeftArrow {
   constructor(game) {
-    this.width = 60
-    this.height = 60
-    this.fallingLeftArrow = fallingLeftArrow
+    this.width = 80
+    this.height = 80
+    // this.fallingLeftArrow = fallingLeftArrow
     // this.fallingLeftArrowArr = fallingLeftArrowArr
-    this.image = document.getElementById("img_left");
+    this.image = document.getElementById("leftArrow");
 
+    // this.position = {
+    //   x: 128,
+    //   y: 813
+    // }
     this.position = {
-      x: 128,
-      y: 813
+      x: 108,
+      y: 613
     }
 
     

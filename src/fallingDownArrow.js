@@ -2,7 +2,7 @@ import { checkFire } from './checkFire.js'
 
 export default class FallingLeftArrow {
   constructor(game, position, leftArrow) {
-    this.image = document.getElementById('fallingLeftArrow');
+    this.image = document.getElementById('fallingDownArrow');
 
     this.gameWidth = game.gameWidth;
     this.gameHeight = game.gameHeight;
@@ -46,7 +46,7 @@ export default class FallingLeftArrow {
   }
 
 
-  fireLeftArrow() {
+  fireDownArrow() {
     if ((this.leftArrow.position.y - this.position.y) < 30 && (this.leftArrow.position.y - this.position.y) > -30) {
       // console.log(this.leftArrow.position.y - this.position.y)
       console.log('success')

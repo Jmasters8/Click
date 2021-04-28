@@ -1,14 +1,17 @@
 export default class DownArrow {
   constructor(gameWidth, gameHeight) {
-    this.width = 82
-    this.height = 82
+    this.width = 80
+    this.height = 80
 
-    this.image = document.getElementById("img_down");
+    this.image = document.getElementById("downArrow");
 
+    // this.position = {
+    //   x: 560,
+    //   y: 800
+    // }
     this.position = {
-      x: 560,
-      // y: gameHeight - this.height - 50
-      y: 800
+      x: 442,
+      y: 613
     }
 
   }

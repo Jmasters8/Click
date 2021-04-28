@@ -2,8 +2,16 @@ import UpArrow from '/src/upArrow.js';
 import RightArrow from '/src/rightArrow.js';
 import LeftArrow from '/src/leftArrow.js';
 import DownArrow from '/src/downArrow.js';
-import InputHandler from '/src/input.js';
-import FallingLeftArrow from '/src/fallingLeftArrow.js'
+
+import GameInputHandler from '/src//inputHandlers/gameInput.js';
+import FallingLeftArrow from '/src/fallingLeftArrow.js';
+import FallingUpArrow from '/src/fallingUpArrow.js';
+import FallingDownArrow from '/src/fallingDownArrow.js';
+import FallingRightArrow from '/src/fallingRightArrow.js';
+import LeftArrowInputHandler from '/src/inputHandlers/leftArrowInput.js';
+import UpArrowInputHandler from '/src/inputHandlers/upArrowInput.js';
+import DownArrowInputHandler from '/src/inputHandlers/downArrowInput.js';
+import RightArrowInputHandler from '/src/inputHandlers/rightArrowInput.js';
 import { checkFire } from './checkFire.js'
 
 const GAMESTATE = {
@@ -20,42 +28,94 @@ export default class Game {
     this.gameWidth = gameWidth;
     this.gameHeight = gameHeight;
     this.gameObjects = [];
-
+    this.score = 0
     this.gameFrame = 0;
-
+    this.game = this;
     this.gamestate = GAMESTATE.MENU
-
+    
     this.rightArrow = new RightArrow(this);
     this.upArrow = new UpArrow(this);
     this.downArrow = new DownArrow(this);
-    // this.fallingLeftArrows = [];
     this.leftArrow = new LeftArrow(this);
-    this.fallingLeftArrow = new FallingLeftArrow(this, {x: 128, y:-20}, this.leftArrow);
 
-  
-
-    // new InputHandler(this.fallingLeftArrow, this);
-
+    new GameInputHandler(this);
+    
   }
 
   start() {
     this.gamestate = GAMESTATE.RUNNING
     playAudio()
-    // let arrow = new FallingLeftArrow(this, {x: 128, y: 300})
 
+
+    let fallingLeftArrows = [
+      new FallingLeftArrow(this, {x: 108, y: -150}, this.leftArrow),
+      new FallingLeftArrow(this, {x: 108, y: -920}, this.leftArrow)
+    ];
+
+
+    // for (let i = 1; i < 2; i ++) {
+    //   fallingLeftArrows.push(new FallingLeftArrow(this, {x: 108, y: i * -150}, this.leftArrow))
+    // }
+    fallingLeftArrows.forEach(arrow => {
+      new LeftArrowInputHandler(arrow)
+    })
+
+
+    let fallingUpArrows = [
+      new FallingUpArrow(this, {x: 275, y: -650}, this.upArrow),
+      new FallingUpArrow(this, {x: 275, y: -1100}, this.upArrow)
+    ];
+
+
+    // for (let i = 1; i < 2; i++) {
+    //   fallingUpArrows.push(new FallingUpArrow(this, {x: 275, y: i * -600}, this.upArrow))
+    // }
+    fallingUpArrows.forEach(arrow => {
+      new UpArrowInputHandler(arrow)
+    })
+
+
+    let fallingDownArrows = [
+      new FallingDownArrow(this, {x: 442, y: -500}, this.downArrow)
+    ];
+
+
+    // for (let i = 1; i < 2; i++) {
+    //   fallingDownArrows.push(new FallingDownArrow(this, {x: 442, y: i * -500}, this.downArrow))
+    // }
+    fallingDownArrows.forEach(arrow => {
+      new DownArrowInputHandler(arrow)
+    })
+
+    let fallingRightArrows = [
+      new FallingRightArrow(this, {x: 609, y: -280}, this.rightArrow),
+      new FallingRightArrow(this, {x: 609, y: -800}, this.rightArrow),
+      new FallingRightArrow(this, {x: 609, y: -1250}, this.rightArrow)
+    ];
+
+    // for (let i = 1; i < 2; i++) {
+    //   fallingRightArrows.push(new FallingRightArrow(this, {x: 609, y: i * -240}, this.rightArrow))
+    // }
     
+    fallingRightArrows.forEach(arrow => {
+      new RightArrowInputHandler(arrow)
+    })
 
-    let fallingLeftArrows = [];
 
-    for (let i = 0; i < 30; i ++) {
-      fallingLeftArrows.push(new FallingLeftArrow(this, {x: 128, y: i * -300}))
-    }
+
+
+
+
+
 
 
     this.movingObjects = [
-      this.fallingLeftArrow,
+      // this.fallingLeftArrow,
       // arrow
-      ...fallingLeftArrows
+      ...fallingLeftArrows,
+      ...fallingUpArrows,
+      ...fallingDownArrows,
+      ...fallingRightArrows
     ]
 
     this.gameObjects = [
@@ -63,9 +123,12 @@ export default class Game {
       this.upArrow,
       this.downArrow,
       this.leftArrow,
-      this.fallingLeftArrow,
+      // this.fallingLeftArrow,
       // arrow
-      ...fallingLeftArrows
+      ...fallingLeftArrows,
+      ...fallingUpArrows,
+      ...fallingDownArrows,
+      ...fallingRightArrows
     ]
   }
 
@@ -147,10 +210,19 @@ export default class Game {
     if (this.gamestate === GAMESTATE.PAUSED) {
       this.gamestate = GAMESTATE.RUNNING
       playAudio()
+      console.log(this.score)
     } else {
       this.gamestate = GAMESTATE.PAUSED;
       playAudio()
     }
+  }
+
+  handleScore(ctx) {
+    ctx.fillStyle = 'black';
+    ctx.strokeStyle = 'black';
+    ctx.font = '30px Veradana';
+    ctx.fillText('Score:', 360, 533);
+    ctx.fillText(this.score, 415, 535)
   }
 
 }

@@ -3,11 +3,15 @@ export default class UpArrow {
     this.width = 80
     this.height = 80
 
-    this.image = document.getElementById("img_up");
+    this.image = document.getElementById("upArrow");
 
+    // this.position = {
+    //   x: 350,
+    //   y: 800
+    // }
     this.position = {
-      x: 350,
-      y: 800
+      x: 275,
+      y: 613
     }
 
   }

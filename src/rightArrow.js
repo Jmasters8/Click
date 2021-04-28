@@ -3,11 +3,15 @@ export default class RightArrow {
     this.width = 80
     this.height = 80
 
-    this.image = document.getElementById("img_right");
+    this.image = document.getElementById("rightArrow");
 
+    // this.position = {
+    //   x: 800,
+    //   y: 800
+    // }
     this.position = {
-      x: 800,
-      y: 800
+      x: 609,
+      y: 613
     }
 
   }

@@ -6,10 +6,29 @@
   <title>TuneRacer</title>
 
   <style>
+
+    html {
+      height: 100%;
+      width: 100%;
+      background: black;
+    }
+
+    body {
+      min-height: 100%;
+    }
+
     #gameScreen {
       border: 1px solid black;
       display: block;
       margin: auto;
+      background: url('https://thumbs.gfycat.com/FaintHonestAuklet-size_restricted.gif');
+      background-size: cover;
+
+    }
+
+    .wrapper {
+      background-color: black;
+      height: 100vh;
     }
 
     img {
@@ -20,13 +39,26 @@
 </head>
 <body>
 
-  <img id="img_left" src="/images/leftarrow.png">
-  <img id="img_up" src="/images/uparrow.png" >
-  <img id="img_right" src="/images/rightarrow.png" >
-  <img id="img_down" src="/images/downarrow.png" >
+  <img id="leftArrow" src="/images/ddrLeftArrow.png">
+  <img id="upArrow" src="/images/ddrUpArrow.png">
+  <img id="downArrow" src="/images/ddrDownArrow.png" >
+  <img id="rightArrow" src="/images/ddrRightArrow.png" >
+  
 
-  <canvas id="gameScreen" width="1000" height="1000"></canvas>
-  <canvas id="text" width="100" height="100"></canvas>
+  <img id="fallingLeftArrow" src="/images/fallingLeftArrow.png">
+  <img id="fallingUpArrow" src="/images/fallingUpArrow.png">
+  <img id="fallingDownArrow" src="/images/fallingDownArrow.png">
+  <img id="fallingRightArrow" src="/images/fallingRightArrow.png">
+
+
+  <img id="background" src="/images/background.png">
+
+  <div></div>
+  <div class="wrapper" background-color="blue">
+    <canvas id="gameScreen" width="800" height="800"></canvas>
+  </div>
+
+  <!-- <canvas id="text" width="100" height="100"></canvas> -->
 
   <script allow="autoplay" playsinline="true" autoplay="" muted="muted">
     let audio = new Audio('/songs/Cascada.mp3');
