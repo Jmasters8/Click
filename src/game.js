@@ -154,7 +154,39 @@ export default class Game {
       new FallingLeftArrow(this, {x: 108, y: -35320}, this.leftArrow), //348
       new FallingLeftArrow(this, {x: 108, y: -35680}, this.leftArrow), //351
       new FallingLeftArrow(this, {x: 108, y: -36240}, this.leftArrow), //356
-      new FallingLeftArrow(this, {x: 108, y: -36530}, this.leftArrow) //359
+      new FallingLeftArrow(this, {x: 108, y: -36530}, this.leftArrow), //359
+      new FallingLeftArrow(this, {x: 108, y: -36980}, this.leftArrow), //364
+      new FallingLeftArrow(this, {x: 108, y: -37500}, this.leftArrow), //372
+      new FallingLeftArrow(this, {x: 108, y: -38210}, this.leftArrow), //378
+      new FallingLeftArrow(this, {x: 108, y: -38710}, this.leftArrow), //387
+      new FallingLeftArrow(this, {x: 108, y: -39110}, this.leftArrow), //391
+      new FallingLeftArrow(this, {x: 108, y: -39150}, this.leftArrow), //392
+      new FallingLeftArrow(this, {x: 108, y: -39190}, this.leftArrow), //393
+      new FallingLeftArrow(this, {x: 108, y: -39230}, this.leftArrow), //394
+      new FallingLeftArrow(this, {x: 108, y: -39270}, this.leftArrow), //395
+      new FallingLeftArrow(this, {x: 108, y: -39310}, this.leftArrow), //396
+      new FallingLeftArrow(this, {x: 108, y: -39570}, this.leftArrow), //400
+      new FallingLeftArrow(this, {x: 108, y: -39950}, this.leftArrow), //404
+      new FallingLeftArrow(this, {x: 108, y: -40350}, this.leftArrow), //408
+      new FallingLeftArrow(this, {x: 108, y: -40760}, this.leftArrow), //413
+      new FallingLeftArrow(this, {x: 108, y: -41400}, this.leftArrow), //423
+      new FallingLeftArrow(this, {x: 108, y: -41500}, this.leftArrow), //425
+      new FallingLeftArrow(this, {x: 108, y: -42080}, this.leftArrow), //430
+      new FallingLeftArrow(this, {x: 108, y: -42700}, this.leftArrow), //440
+      new FallingLeftArrow(this, {x: 108, y: -43320}, this.leftArrow), //449
+      new FallingLeftArrow(this, {x: 108, y: -43380}, this.leftArrow), //451
+      new FallingLeftArrow(this, {x: 108, y: -43470}, this.leftArrow), //453
+      new FallingLeftArrow(this, {x: 108, y: -44020}, this.leftArrow), //459
+      new FallingLeftArrow(this, {x: 108, y: -44130}, this.leftArrow), //460
+      new FallingLeftArrow(this, {x: 108, y: -44410}, this.leftArrow), //464
+      new FallingLeftArrow(this, {x: 108, y: -44720}, this.leftArrow), //467
+      new FallingLeftArrow(this, {x: 108, y: -44860}, this.leftArrow), //468
+      new FallingLeftArrow(this, {x: 108, y: -45320}, this.leftArrow), //477
+      new FallingLeftArrow(this, {x: 108, y: -45540}, this.leftArrow), //480
+      new FallingLeftArrow(this, {x: 108, y: -45970}, this.leftArrow), //484
+      new FallingLeftArrow(this, {x: 108, y: -46070}, this.leftArrow), //486
+      new FallingLeftArrow(this, {x: 108, y: -46460}, this.leftArrow), //490
+      new FallingLeftArrow(this, {x: 108, y: -46840}, this.leftArrow) //493
 
     ];
 
@@ -254,7 +286,37 @@ export default class Game {
       new FallingUpArrow(this, {x: 275, y: -35600}, this.upArrow), //350
       new FallingUpArrow(this, {x: 275, y: -35980}, this.upArrow), //353
       new FallingUpArrow(this, {x: 275, y: -36320}, this.upArrow), //357
-      new FallingUpArrow(this, {x: 275, y: -36600}, this.upArrow) //360
+      new FallingUpArrow(this, {x: 275, y: -36600}, this.upArrow), //360
+      new FallingUpArrow(this, {x: 275, y: -36900}, this.upArrow), //363
+      new FallingUpArrow(this, {x: 275, y: -37080}, this.upArrow), //365
+      new FallingUpArrow(this, {x: 275, y: -37700}, this.upArrow), //374
+      new FallingUpArrow(this, {x: 275, y: -37940}, this.upArrow), //376
+      new FallingUpArrow(this, {x: 275, y: -38360}, this.upArrow), //380
+      new FallingUpArrow(this, {x: 275, y: -38820}, this.upArrow), //388
+      new FallingUpArrow(this, {x: 275, y: -39520}, this.upArrow), //399
+      new FallingUpArrow(this, {x: 275, y: -39730}, this.upArrow), //402
+      new FallingUpArrow(this, {x: 275, y: -40120}, this.upArrow), //406
+      new FallingUpArrow(this, {x: 275, y: -40400}, this.upArrow), //409
+      new FallingUpArrow(this, {x: 275, y: -40640}, this.upArrow), //412
+      new FallingUpArrow(this, {x: 275, y: -40970}, this.upArrow), //415
+      new FallingUpArrow(this, {x: 275, y: -41450}, this.upArrow), //424
+      new FallingUpArrow(this, {x: 275, y: -41550}, this.upArrow), //426
+      new FallingUpArrow(this, {x: 275, y: -42130}, this.upArrow), //431
+      new FallingUpArrow(this, {x: 275, y: -42620}, this.upArrow), //439
+      new FallingUpArrow(this, {x: 275, y: -43010}, this.upArrow), //443
+      new FallingUpArrow(this, {x: 275, y: -43050}, this.upArrow), //444
+      new FallingUpArrow(this, {x: 275, y: -43090}, this.upArrow), //445
+      new FallingUpArrow(this, {x: 275, y: -43130}, this.upArrow), //446
+      new FallingUpArrow(this, {x: 275, y: -43170}, this.upArrow), //447
+      new FallingUpArrow(this, {x: 275, y: -43610}, this.upArrow), //455
+      new FallingUpArrow(this, {x: 275, y: -43700}, this.upArrow), //456
+      new FallingUpArrow(this, {x: 275, y: -44270}, this.upArrow), //462
+      new FallingUpArrow(this, {x: 275, y: -44880}, this.upArrow), //469
+      new FallingUpArrow(this, {x: 275, y: -45280}, this.upArrow), //476
+      new FallingUpArrow(this, {x: 275, y: -45640}, this.upArrow), //481
+      new FallingUpArrow(this, {x: 275, y: -46250}, this.upArrow), //488
+      new FallingUpArrow(this, {x: 275, y: -46420}, this.upArrow), //489
+      new FallingUpArrow(this, {x: 275, y: -47000}, this.upArrow) //495
     ];
 //2
 
@@ -358,8 +420,32 @@ export default class Game {
       new FallingDownArrow(this, {x: 442, y: -33340}, this.downArrow), //328
       new FallingDownArrow(this, {x: 442, y: -35760}, this.downArrow), //352
       new FallingDownArrow(this, {x: 442, y: -36160}, this.downArrow), //355
-      new FallingDownArrow(this, {x: 442, y: -36690}, this.downArrow) //361
-
+      new FallingDownArrow(this, {x: 442, y: -36690}, this.downArrow), //361
+      new FallingDownArrow(this, {x: 442, y: -37150}, this.downArrow), //366
+      new FallingDownArrow(this, {x: 442, y: -37830}, this.downArrow), //375
+      new FallingDownArrow(this, {x: 442, y: -38290}, this.downArrow), //379
+      new FallingDownArrow(this, {x: 442, y: -38910}, this.downArrow), //389
+      new FallingDownArrow(this, {x: 442, y: -39410}, this.downArrow), //397
+      new FallingDownArrow(this, {x: 442, y: -39620}, this.downArrow), //401
+      new FallingDownArrow(this, {x: 442, y: -40050}, this.downArrow), //405
+      new FallingDownArrow(this, {x: 442, y: -40510}, this.downArrow), //410
+      new FallingDownArrow(this, {x: 442, y: -41030}, this.downArrow), //416
+      new FallingDownArrow(this, {x: 442, y: -41620}, this.downArrow), //427
+      new FallingDownArrow(this, {x: 442, y: -41860}, this.downArrow), //429
+      new FallingDownArrow(this, {x: 442, y: -42180}, this.downArrow), //432
+      new FallingDownArrow(this, {x: 442, y: -42770}, this.downArrow), //441
+      new FallingDownArrow(this, {x: 442, y: -43810}, this.downArrow), //457
+      new FallingDownArrow(this, {x: 442, y: -43940}, this.downArrow), //458
+      new FallingDownArrow(this, {x: 442, y: -44340}, this.downArrow), //463
+      new FallingDownArrow(this, {x: 442, y: -44940}, this.downArrow), //470
+      new FallingDownArrow(this, {x: 442, y: -45360}, this.downArrow), //478
+      new FallingDownArrow(this, {x: 442, y: -45750}, this.downArrow), //482
+      new FallingDownArrow(this, {x: 442, y: -46020}, this.downArrow), //485
+      new FallingDownArrow(this, {x: 442, y: -46120}, this.downArrow), //487
+      new FallingDownArrow(this, {x: 442, y: -46570}, this.downArrow), //491
+      new FallingDownArrow(this, {x: 442, y: -46880}, this.downArrow), //494
+      new FallingDownArrow(this, {x: 442, y: -47270}, this.downArrow), //497
+      new FallingDownArrow(this, {x: 442, y: -47350}, this.downArrow) //499
       
     ];
 
@@ -453,7 +539,59 @@ export default class Game {
       new FallingRightArrow(this, {x: 609, y: -34550}, this.rightArrow), //333
       new FallingRightArrow(this, {x: 609, y: -35520}, this.rightArrow), //349
       new FallingRightArrow(this, {x: 609, y: -36080}, this.rightArrow), //354
-      new FallingRightArrow(this, {x: 609, y: -36460}, this.rightArrow) //358
+      new FallingRightArrow(this, {x: 609, y: -36460}, this.rightArrow), //358
+      new FallingRightArrow(this, {x: 609, y: -36780}, this.rightArrow), //362
+      new FallingRightArrow(this, {x: 609, y: -37230}, this.rightArrow), //367
+      new FallingRightArrow(this, {x: 609, y: -37270}, this.rightArrow), //368
+      new FallingRightArrow(this, {x: 609, y: -37310}, this.rightArrow), //369
+      new FallingRightArrow(this, {x: 609, y: -37350}, this.rightArrow), //370
+      new FallingRightArrow(this, {x: 609, y: -37390}, this.rightArrow), //371
+      new FallingRightArrow(this, {x: 609, y: -37600}, this.rightArrow), //373
+      new FallingRightArrow(this, {x: 609, y: -38130}, this.rightArrow), //377 first after up, i want this to last beginning
+      new FallingRightArrow(this, {x: 609, y: -38430}, this.rightArrow), //381
+      new FallingRightArrow(this, {x: 609, y: -38470}, this.rightArrow), //382
+      new FallingRightArrow(this, {x: 609, y: -38510}, this.rightArrow), //383
+      new FallingRightArrow(this, {x: 609, y: -38550}, this.rightArrow), //384
+      new FallingRightArrow(this, {x: 609, y: -38590}, this.rightArrow), //385
+      new FallingRightArrow(this, {x: 609, y: -38630}, this.rightArrow), //386 -----
+      new FallingRightArrow(this, {x: 609, y: -39000}, this.rightArrow), //390
+      new FallingRightArrow(this, {x: 609, y: -39470}, this.rightArrow), //398
+      new FallingRightArrow(this, {x: 609, y: -39880}, this.rightArrow), //403
+      new FallingRightArrow(this, {x: 609, y: -40230}, this.rightArrow), //407
+      new FallingRightArrow(this, {x: 609, y: -40580}, this.rightArrow), //411
+      new FallingRightArrow(this, {x: 609, y: -40840}, this.rightArrow), //414
+      new FallingRightArrow(this, {x: 609, y: -41090}, this.rightArrow), //417
+      new FallingRightArrow(this, {x: 609, y: -41130}, this.rightArrow), //418
+      new FallingRightArrow(this, {x: 609, y: -41170}, this.rightArrow), //419
+      new FallingRightArrow(this, {x: 609, y: -41210}, this.rightArrow), //420
+      new FallingRightArrow(this, {x: 609, y: -41250}, this.rightArrow), //421
+      new FallingRightArrow(this, {x: 609, y: -41290}, this.rightArrow), //422
+      new FallingRightArrow(this, {x: 609, y: -41730}, this.rightArrow), //428
+      new FallingRightArrow(this, {x: 609, y: -42260}, this.rightArrow), //433
+      new FallingRightArrow(this, {x: 609, y: -42300}, this.rightArrow), //434
+      new FallingRightArrow(this, {x: 609, y: -42340}, this.rightArrow), //435
+      new FallingRightArrow(this, {x: 609, y: -42380}, this.rightArrow), //436
+      new FallingRightArrow(this, {x: 609, y: -42420}, this.rightArrow), //437
+      new FallingRightArrow(this, {x: 609, y: -42460}, this.rightArrow), //438
+      new FallingRightArrow(this, {x: 609, y: -42870}, this.rightArrow), //442
+      new FallingRightArrow(this, {x: 609, y: -43290}, this.rightArrow), //448
+      new FallingRightArrow(this, {x: 609, y: -43350}, this.rightArrow), //450
+      new FallingRightArrow(this, {x: 609, y: -43410}, this.rightArrow), //452
+      new FallingRightArrow(this, {x: 609, y: -43530}, this.rightArrow), //454
+      new FallingRightArrow(this, {x: 609, y: -44210}, this.rightArrow), //461
+      new FallingRightArrow(this, {x: 609, y: -44510}, this.rightArrow), //465
+      new FallingRightArrow(this, {x: 609, y: -44650}, this.rightArrow), //466
+      new FallingRightArrow(this, {x: 609, y: -45000}, this.rightArrow), //471
+      new FallingRightArrow(this, {x: 609, y: -45040}, this.rightArrow), //472
+      new FallingRightArrow(this, {x: 609, y: -45080}, this.rightArrow), //473
+      new FallingRightArrow(this, {x: 609, y: -45120}, this.rightArrow), //474
+      new FallingRightArrow(this, {x: 609, y: -45160}, this.rightArrow), //475
+      new FallingRightArrow(this, {x: 609, y: -45440}, this.rightArrow), //479
+      new FallingRightArrow(this, {x: 609, y: -45850}, this.rightArrow), //483
+      new FallingRightArrow(this, {x: 609, y: -46720}, this.rightArrow), //492
+      new FallingRightArrow(this, {x: 609, y: -47230}, this.rightArrow), //496,
+      new FallingRightArrow(this, {x: 609, y: -47310}, this.rightArrow), //498
+      new FallingRightArrow(this, {x: 609, y: -47390}, this.rightArrow) //500
 
     ];
 
