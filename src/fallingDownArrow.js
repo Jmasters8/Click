@@ -54,7 +54,7 @@ export default class FallingLeftArrow {
       this.position.y = 2000
     } else {
       // console.log('failure')
-      this.image = document.getElementById('fallingDownArrowMissed');
+      
     }
   }
 

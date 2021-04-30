@@ -33,19 +33,21 @@ export default class Game {
     this.gameFrame = 0;
     this.game = this;
     this.gamestate = GAMESTATE.MENU
-    
+    this.background = document.getElementById('gameScreen')
     this.rightArrow = new RightArrow(this);
     this.upArrow = new UpArrow(this);
     this.downArrow = new DownArrow(this);
     this.leftArrow = new LeftArrow(this);
-
     new GameInputHandler(this);
-    
+    this.audio = "off"
   }
 
   start() {
     this.gamestate = GAMESTATE.RUNNING
     playAudio()
+    this.audio = "on"
+    console.log(this.background.display)
+    document.getElementById('gameScreen').style.width = 200;
 
 
     let fallingLeftArrows = [
@@ -195,8 +197,26 @@ export default class Game {
       new FallingLeftArrow(this, {x: 108, y: -48260}, this.leftArrow), //508
       new FallingLeftArrow(this, {x: 108, y: -48730}, this.leftArrow), //512
       new FallingLeftArrow(this, {x: 108, y: -48840}, this.leftArrow), //513
-      new FallingLeftArrow(this, {x: 108, y: -49380}, this.leftArrow) //522
-
+      new FallingLeftArrow(this, {x: 108, y: -49380}, this.leftArrow), //522
+      new FallingLeftArrow(this, {x: 108, y: -49850}, this.leftArrow), //526
+      new FallingLeftArrow(this, {x: 108, y: -49970}, this.leftArrow), //528
+      new FallingLeftArrow(this, {x: 108, y: -50590}, this.leftArrow), //534
+      new FallingLeftArrow(this, {x: 108, y: -51100}, this.leftArrow), //540
+      new FallingLeftArrow(this, {x: 108, y: -51790}, this.leftArrow), //547
+      new FallingLeftArrow(this, {x: 108, y: -52140}, this.leftArrow), //551
+      new FallingLeftArrow(this, {x: 108, y: -52460}, this.leftArrow), //555
+      new FallingLeftArrow(this, {x: 108, y: -52760}, this.leftArrow), //561
+      new FallingLeftArrow(this, {x: 108, y: -53100}, this.leftArrow), //567
+      new FallingLeftArrow(this, {x: 108, y: -53500}, this.leftArrow), //572
+      new FallingLeftArrow(this, {x: 108, y: -53850}, this.leftArrow), //576
+      new FallingLeftArrow(this, {x: 108, y: -54650}, this.leftArrow), //587
+      new FallingLeftArrow(this, {x: 108, y: -54700}, this.leftArrow), //587
+      new FallingLeftArrow(this, {x: 108, y: -54750}, this.leftArrow), //587
+      new FallingLeftArrow(this, {x: 108, y: -54800}, this.leftArrow), //587
+      new FallingLeftArrow(this, {x: 108, y: -54850}, this.leftArrow), //587
+      new FallingLeftArrow(this, {x: 108, y: -54900}, this.leftArrow), //587
+      new FallingLeftArrow(this, {x: 108, y: -54950}, this.leftArrow), //587
+      new FallingLeftArrow(this, {x: 108, y: -55000}, this.leftArrow) //587
 
     ];
 
@@ -332,7 +352,28 @@ export default class Game {
       new FallingUpArrow(this, {x: 275, y: -48620}, this.upArrow), //511
       new FallingUpArrow(this, {x: 275, y: -49140}, this.upArrow), //519
       new FallingUpArrow(this, {x: 275, y: -49180}, this.upArrow), //520
-      new FallingUpArrow(this, {x: 275, y: -49500}, this.upArrow) //523
+      new FallingUpArrow(this, {x: 275, y: -49510}, this.upArrow), //523
+      new FallingUpArrow(this, {x: 275, y: -49910}, this.upArrow), //527
+      new FallingUpArrow(this, {x: 275, y: -50030}, this.upArrow), //529
+      new FallingUpArrow(this, {x: 275, y: -50490}, this.upArrow), //533
+      new FallingUpArrow(this, {x: 275, y: -51160}, this.upArrow), //541
+      new FallingUpArrow(this, {x: 275, y: -51370}, this.upArrow), //544
+      new FallingUpArrow(this, {x: 275, y: -51960}, this.upArrow), //549
+      new FallingUpArrow(this, {x: 275, y: -52250}, this.upArrow), //553
+      new FallingUpArrow(this, {x: 275, y: -52540}, this.upArrow), //556
+      new FallingUpArrow(this, {x: 275, y: -52580}, this.upArrow), //557
+      new FallingUpArrow(this, {x: 275, y: -52620}, this.upArrow), //558
+      new FallingUpArrow(this, {x: 275, y: -52660}, this.upArrow), //559
+      new FallingUpArrow(this, {x: 275, y: -53160}, this.upArrow), //568
+      new FallingUpArrow(this, {x: 275, y: -53400}, this.upArrow), //571
+      new FallingUpArrow(this, {x: 275, y: -53800}, this.upArrow), //575
+      new FallingUpArrow(this, {x: 275, y: -53950}, this.upArrow), //577
+      new FallingUpArrow(this, {x: 275, y: -53990}, this.upArrow), //578
+      new FallingUpArrow(this, {x: 275, y: -54030}, this.upArrow), //579
+      new FallingUpArrow(this, {x: 275, y: -54070}, this.upArrow), //580
+      new FallingUpArrow(this, {x: 275, y: -54110}, this.upArrow), //581
+      new FallingUpArrow(this, {x: 275, y: -54150}, this.upArrow), //582
+      new FallingUpArrow(this, {x: 275, y: -54400}, this.upArrow) //584
     ];
 //2
 
@@ -466,7 +507,24 @@ export default class Game {
       new FallingDownArrow(this, {x: 442, y: -48010}, this.downArrow), //506
       new FallingDownArrow(this, {x: 442, y: -48410}, this.downArrow), //509
       new FallingDownArrow(this, {x: 442, y: -49280}, this.downArrow), //521
-      new FallingDownArrow(this, {x: 442, y: -49600}, this.downArrow) //524
+      new FallingDownArrow(this, {x: 442, y: -49630}, this.downArrow), //524
+      new FallingDownArrow(this, {x: 442, y: -50380}, this.downArrow), //532
+      new FallingDownArrow(this, {x: 442, y: -50900}, this.downArrow), //536
+      new FallingDownArrow(this, {x: 442, y: -50940}, this.downArrow), //537
+      new FallingDownArrow(this, {x: 442, y: -50980}, this.downArrow), //538
+      new FallingDownArrow(this, {x: 442, y: -51020}, this.downArrow), //539
+      new FallingDownArrow(this, {x: 442, y: -51220}, this.downArrow), //542
+      new FallingDownArrow(this, {x: 442, y: -51590}, this.downArrow), //545
+      new FallingDownArrow(this, {x: 442, y: -51860}, this.downArrow), //548
+      new FallingDownArrow(this, {x: 442, y: -52200}, this.downArrow), //552
+      new FallingDownArrow(this, {x: 442, y: -52820}, this.downArrow), //562
+      new FallingDownArrow(this, {x: 442, y: -52860}, this.downArrow), //563
+      new FallingDownArrow(this, {x: 442, y: -52900}, this.downArrow), //564
+      new FallingDownArrow(this, {x: 442, y: -52940}, this.downArrow), //565
+      new FallingDownArrow(this, {x: 442, y: -52980}, this.downArrow), //566
+      new FallingDownArrow(this, {x: 442, y: -53240}, this.downArrow), //569
+      new FallingDownArrow(this, {x: 442, y: -53750}, this.downArrow), //574
+      new FallingDownArrow(this, {x: 442, y: -54480}, this.downArrow) //585
       
     ];
 
@@ -618,7 +676,19 @@ export default class Game {
       new FallingRightArrow(this, {x: 609, y: -48980}, this.rightArrow), //516
       new FallingRightArrow(this, {x: 609, y: -49020}, this.rightArrow), //517
       new FallingRightArrow(this, {x: 609, y: -49060}, this.rightArrow), //518
-      new FallingRightArrow(this, {x: 609, y: -49700}, this.rightArrow) //525
+      new FallingRightArrow(this, {x: 609, y: -49730}, this.rightArrow), //525
+      new FallingRightArrow(this, {x: 609, y: -50150}, this.rightArrow), //530
+      new FallingRightArrow(this, {x: 609, y: -50250}, this.rightArrow), //531
+      new FallingRightArrow(this, {x: 609, y: -50760}, this.rightArrow), //535
+      new FallingRightArrow(this, {x: 609, y: -51280}, this.rightArrow), //543
+      new FallingRightArrow(this, {x: 609, y: -51660}, this.rightArrow), //546
+      new FallingRightArrow(this, {x: 609, y: -52060}, this.rightArrow), //550
+      new FallingRightArrow(this, {x: 609, y: -52310}, this.rightArrow), //554
+      new FallingRightArrow(this, {x: 609, y: -52710}, this.rightArrow), //560
+      new FallingRightArrow(this, {x: 609, y: -53270}, this.rightArrow), //570
+      new FallingRightArrow(this, {x: 609, y: -53700}, this.rightArrow), //573
+      new FallingRightArrow(this, {x: 609, y: -54270}, this.rightArrow), //583
+      new FallingRightArrow(this, {x: 609, y: -54560}, this.rightArrow) //586
 
     ];
 
@@ -715,21 +785,25 @@ export default class Game {
       ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
       ctx.fill();
 
-      ctx.font = "30px Arial";
-      ctx.fillStyle = "white";
+      ctx.font = "30px orbitron";
+      ctx.fillStyle = "black";
       ctx.textAlign = "center";
       ctx.fillText("Paused", this.gameWidth / 2, this.gameHeight / 2)
     }
 
     if (this.gamestate === GAMESTATE.MENU) {
-      ctx.rect(0, 0, this.gameWidth, this.gameHeight);
-      ctx.fillStyle = "rgba(0, 0, 0, 1)";
-      ctx.fill();
+      // ctx.rect(0, 0, this.gameWidth, this.gameHeight);
+      // ctx.fillStyle = "rgba(1, 0, 0, 1)";
+      // ctx.fill();
+  
+      // this.background.display = 'none;'
 
-      ctx.font = "30px Arial";
-      ctx.fillStyle = "white";
+      // ctx.font = `30px ${this.arial}`;
+      ctx.font = "30px orbitron";
+      // ctx.font = "30px daggersquare";
+      ctx.fillStyle = "black";
       ctx.textAlign = "center";
-      ctx.fillText("Press SPACEBAR to Start", this.gameWidth / 2, this.gameHeight / 2)
+      ctx.fillText("Press S to Start", this.gameWidth / 2, this.gameHeight / 2)
     }
 
     
@@ -739,24 +813,41 @@ export default class Game {
     if (this.gamestate === GAMESTATE.PAUSED) {
       this.gamestate = GAMESTATE.RUNNING
       playAudio()
-      console.log(this.score)
+      this.audio = "on"
+    } else if (this.gamestate === GAMESTATE.MENU) {
+      return;
     } else {
       this.gamestate = GAMESTATE.PAUSED;
       playAudio()
+      this.audio ="off"
     }
   }
 
   handleScore(ctx) {
     ctx.fillStyle = 'black';
     ctx.strokeStyle = 'black';
-    ctx.font = '30px Veradana';
-    ctx.fillText('Score:', 360, 533);
-    ctx.fillText(this.score, 415, 535)
+    ctx.font = '30px orbitron';
+    // ctx.fillText('Score:', 375, 533);
+    // ctx.fillText(this.score, 470, 535);
+    ctx.fillText('Score:', 375, 753);
+    ctx.fillText(this.score, 470, 755);
     // ctx.fillText('Missed:', 500, 533);
     // ctx.fillText(this.missed, 565, 535)
   }
 
-  handleMissed() {
+  reset() {
+    this.gamestate = GAMESTATE.MENU;
+    this.score = 0;
+    console.log(this.audio)
+    if (this.audio === "on") {
+      playAudio();
+      this.audio = "off"
+    } else {
+      return
+    }
+  }
+
+  resetGame() {
 
   }
 

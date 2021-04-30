@@ -4,37 +4,122 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TuneRacer</title>
-
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Permanent+Marker&display=swap');
+    </style>
   <style>
 
     html {
       height: 100%;
       width: 100%;
       background: black;
+      background: url('https://st2.depositphotos.com/1310390/8819/v/600/depositphotos_88196206-stock-illustration-show-or-dance-floor-vector.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
     body {
       min-height: 100%;
+      overflow: hidden;
     }
 
     #gameScreen {
-      border: 1px solid black;
+      border: 2px solid black;
+      /* display: none; */
       display: block;
+      visibility: hidden;
       margin: auto;
       background: url('https://thumbs.gfycat.com/FaintHonestAuklet-size_restricted.gif');
       background-size: cover;
+      border-radius: 50px;
+      position: relative;
+  
     }
 
-    #space {
+    #title {
       height: 100px;
+      color: black;
+      text-align: center;
+      font-size: 80px;
+    }
+
+    #title-text {
+      font-family: 'orbitron';
     }
     .wrapper {
-      background-color: black;
-      height: 100vh;
+      /* background-color: black; */
+      /* height: 100vh; */
+      /* display: none; */
     }
 
     img {
       display: none;
+    }
+
+    #Enter {
+      left: 44%;
+      bottom: 4%;
+      position: absolute;
+      margin-left: -20px;
+      background: none;
+      border: none;
+      outline: none;
+      font-size: 70px;
+      font-family: 'orbitron';
+      cursor: pointer;
+    }
+
+    #instructions {
+      position: absolute;
+    /* height: 450px; */
+    height: 35%;
+    /* width: 60%; */
+    width: 32%;
+    /* max-width: 660px; */
+    /* width: 700px; */
+    left: 34%;
+    bottom: 40%;
+    border: 6px solid black;
+    border-radius: 50px;
+    visibility: hidden;
+    font-family: 'orbitron';
+    text-align: center;
+    font-size: 20px;
+    }
+
+    #instructions > h1 {
+      text-decoration: underline;
+    }
+    #instructions ol {
+      text-align: left;
+    }
+    #instructions li {
+      padding: 5px;
+    }
+
+    #instructions-button {
+      left: 5%;
+      bottom: 5%;
+      position: absolute;
+      margin-left: -20px;
+      font-size: 40px;
+      border: none;
+      background: none;
+      font-family: 'orbitron';
+      cursor: pointer;
+    }
+
+    #github-logo {
+      display: block;
+      width: 65px;
+      height: 65px;
+      position: absolute;
+      bottom: 4.5%;
+      right: 5%;
     }
 
   </style>
@@ -52,14 +137,54 @@
   <img id="fallingDownArrow" src="./images/fallingDownArrow.png">
   <img id="fallingRightArrow" src="./images/fallingRightArrow.png">
 
-
-  <img id="background" src="./images/background.png">
-
-  <div id="space"></div>
+  
+  <div id="title">
+    <div id=title-text>
+      Click
+    </div>
+  </div>
+  <button id="Enter" onClick="document.getElementById('gameScreen').style.visibility = 'visible'"
+  onClick="document.getElementById('instructions').style.visibility = 'hidden'">
+    Enter
+  </button>
+  <button id="instructions-button" onClick="document.getElementById('instructions').style.visibility = 'visible'">
+    Instructions
+  </button>
+  <div id="instructions">
+    <h1>Instructions</h1>
+    <ol>
+      <li>
+        Try and click the correct arrow key at the right time (blue falling arrows must line up with corresponding stationary black arrows)
+      </li>
+      <li>
+        Press spacebar to pause
+      </li>
+      <li>
+        press esc to return to the main menu
+      </li>
+    </ol>
+  </div>
+  <a href="https://github.com/Jmasters8/TuneRacer" target='_blank'>
+    <img id="github-logo" src="./images/githubLogo.png">
+  </a>
+  
   <div class="wrapper" background-color="blue">
     <canvas id="gameScreen" width="800" height="800"></canvas>
   </div>
-
+  <script>
+    function showInstructions() {
+      let gameScreen = document.querySelector('#gameScreen')
+      let instructions = document.querySelector('#instructions')
+      let instructionStyles = getComputedStyle(instructions)
+      let gameStyles = getComputedStyle(gameScreen)
+      if (gameStyles.visibility === 'visible') {
+        instructionStyles.visibility = 'hidden';
+      } else {
+        instructionStyles.visibility = 'visible'
+      }
+    }
+    
+  </script>
   <!-- <canvas id="text" width="100" height="100"></canvas> -->
 
   <script allow="autoplay" playsinline="true" autoplay="" muted="muted">
