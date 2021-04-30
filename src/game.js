@@ -29,6 +29,7 @@ export default class Game {
     this.gameHeight = gameHeight;
     this.gameObjects = [];
     this.score = 0
+    this.missed = 0
     this.gameFrame = 0;
     this.game = this;
     this.gamestate = GAMESTATE.MENU
@@ -186,7 +187,16 @@ export default class Game {
       new FallingLeftArrow(this, {x: 108, y: -45970}, this.leftArrow), //484
       new FallingLeftArrow(this, {x: 108, y: -46070}, this.leftArrow), //486
       new FallingLeftArrow(this, {x: 108, y: -46460}, this.leftArrow), //490
-      new FallingLeftArrow(this, {x: 108, y: -46840}, this.leftArrow) //493
+      new FallingLeftArrow(this, {x: 108, y: -46840}, this.leftArrow), //493
+      new FallingLeftArrow(this, {x: 108, y: -47490}, this.leftArrow), //501
+      new FallingLeftArrow(this, {x: 108, y: -47590}, this.leftArrow), //502
+      new FallingLeftArrow(this, {x: 108, y: -47800}, this.leftArrow), //504
+      new FallingLeftArrow(this, {x: 108, y: -48130}, this.leftArrow), //507
+      new FallingLeftArrow(this, {x: 108, y: -48260}, this.leftArrow), //508
+      new FallingLeftArrow(this, {x: 108, y: -48730}, this.leftArrow), //512
+      new FallingLeftArrow(this, {x: 108, y: -48840}, this.leftArrow), //513
+      new FallingLeftArrow(this, {x: 108, y: -49380}, this.leftArrow) //522
+
 
     ];
 
@@ -316,7 +326,13 @@ export default class Game {
       new FallingUpArrow(this, {x: 275, y: -45640}, this.upArrow), //481
       new FallingUpArrow(this, {x: 275, y: -46250}, this.upArrow), //488
       new FallingUpArrow(this, {x: 275, y: -46420}, this.upArrow), //489
-      new FallingUpArrow(this, {x: 275, y: -47000}, this.upArrow) //495
+      new FallingUpArrow(this, {x: 275, y: -47000}, this.upArrow), //495
+      new FallingUpArrow(this, {x: 275, y: -47880}, this.upArrow), //505
+      new FallingUpArrow(this, {x: 275, y: -48510}, this.upArrow), //510
+      new FallingUpArrow(this, {x: 275, y: -48620}, this.upArrow), //511
+      new FallingUpArrow(this, {x: 275, y: -49140}, this.upArrow), //519
+      new FallingUpArrow(this, {x: 275, y: -49180}, this.upArrow), //520
+      new FallingUpArrow(this, {x: 275, y: -49500}, this.upArrow) //523
     ];
 //2
 
@@ -445,7 +461,12 @@ export default class Game {
       new FallingDownArrow(this, {x: 442, y: -46570}, this.downArrow), //491
       new FallingDownArrow(this, {x: 442, y: -46880}, this.downArrow), //494
       new FallingDownArrow(this, {x: 442, y: -47270}, this.downArrow), //497
-      new FallingDownArrow(this, {x: 442, y: -47350}, this.downArrow) //499
+      new FallingDownArrow(this, {x: 442, y: -47350}, this.downArrow), //499
+      new FallingDownArrow(this, {x: 442, y: -47690}, this.downArrow), //503
+      new FallingDownArrow(this, {x: 442, y: -48010}, this.downArrow), //506
+      new FallingDownArrow(this, {x: 442, y: -48410}, this.downArrow), //509
+      new FallingDownArrow(this, {x: 442, y: -49280}, this.downArrow), //521
+      new FallingDownArrow(this, {x: 442, y: -49600}, this.downArrow) //524
       
     ];
 
@@ -591,7 +612,13 @@ export default class Game {
       new FallingRightArrow(this, {x: 609, y: -46720}, this.rightArrow), //492
       new FallingRightArrow(this, {x: 609, y: -47230}, this.rightArrow), //496,
       new FallingRightArrow(this, {x: 609, y: -47310}, this.rightArrow), //498
-      new FallingRightArrow(this, {x: 609, y: -47390}, this.rightArrow) //500
+      new FallingRightArrow(this, {x: 609, y: -47390}, this.rightArrow), //500
+      new FallingRightArrow(this, {x: 609, y: -48900}, this.rightArrow), //514
+      new FallingRightArrow(this, {x: 609, y: -48940}, this.rightArrow), //515
+      new FallingRightArrow(this, {x: 609, y: -48980}, this.rightArrow), //516
+      new FallingRightArrow(this, {x: 609, y: -49020}, this.rightArrow), //517
+      new FallingRightArrow(this, {x: 609, y: -49060}, this.rightArrow), //518
+      new FallingRightArrow(this, {x: 609, y: -49700}, this.rightArrow) //525
 
     ];
 
@@ -725,6 +752,12 @@ export default class Game {
     ctx.font = '30px Veradana';
     ctx.fillText('Score:', 360, 533);
     ctx.fillText(this.score, 415, 535)
+    // ctx.fillText('Missed:', 500, 533);
+    // ctx.fillText(this.missed, 565, 535)
+  }
+
+  handleMissed() {
+
   }
 
 }

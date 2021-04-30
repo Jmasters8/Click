@@ -51,8 +51,10 @@ export default class FallingLeftArrow {
       // console.log(this.leftArrow.position.y - this.position.y)
       console.log('success')
       this.game.score ++
+      this.position.y = 2000
     } else {
       // console.log('failure')
+      this.image = document.getElementById('fallingDownArrowMissed');
     }
   }
 
