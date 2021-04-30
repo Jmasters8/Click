@@ -61,7 +61,7 @@
     }
 
     #Enter {
-      left: 44%;
+      left: 45%;
       bottom: 4%;
       position: absolute;
       margin-left: -20px;
@@ -88,7 +88,7 @@
     visibility: hidden;
     font-family: 'orbitron';
     text-align: center;
-    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
     }
 
     #instructions > h1 {
@@ -99,6 +99,7 @@
     }
     #instructions li {
       padding: 5px;
+      font-size: 19px;
     }
 
     #instructions-button {
@@ -106,7 +107,7 @@
       bottom: 5%;
       position: absolute;
       margin-left: -20px;
-      font-size: 40px;
+      font-size: 30px;
       border: none;
       background: none;
       font-family: 'orbitron';
@@ -148,13 +149,16 @@
     Enter
   </button>
   <button id="instructions-button" onClick="document.getElementById('instructions').style.visibility = 'visible'">
-    Instructions
+    Instructions & Controls
   </button>
   <div id="instructions">
-    <h1>Instructions</h1>
+    <h1>Instructions & Controls</h1>
     <ol>
       <li>
         Try and click the correct arrow key at the right time (blue falling arrows must line up with corresponding stationary black arrows)
+      </li>
+      <li>
+        Consecutive arrows in the same direction should be pressed individually (Do not hold down keys)
       </li>
       <li>
         Press spacebar to pause
