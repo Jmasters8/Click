@@ -52,5 +52,12 @@ document.addEventListener('keydown', event => {
       }
     })
 ```
-
+## Gameplay Clip
 ![gameplay](https://thumbs.gfycat.com/PessimisticBitesizedChihuahua-size_restricted.gif)
+
+## Future Implementations
+### Adding Song Lyrics
+Along with the arrows falling down, the player would have to type out the lyrics at the correct time (in sync with the song).
+
+### Adding a variety of songs
+Click consists of only one song, but there will be more to choose from in the future!
