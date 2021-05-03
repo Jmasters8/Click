@@ -35,7 +35,7 @@ fireRightArrow() {
     this.position.y += this.speed.y;
   }
 ```
-```
+```javascript
 //rightArrowInput.js
 document.addEventListener('keydown', event => {
       switch (event.keyCode) {
