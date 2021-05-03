@@ -52,12 +52,6 @@
       text-shadow: 1px 1px 2px rgb(54, 232, 255), 0 0 1em rgb(0, 103, 151), 0 0 0.2em rgb(18, 0, 122);
     }
 
-    .wrapper {
-      /* background-color: black; */
-      /* height: 100vh; */
-      /* display: none; */
-    }
-
     img {
       display: none;
     }
@@ -229,6 +223,17 @@
       }
     }
 
+  </script>
+  <script>
+    function setFavicon(favImg){
+      let headTitle = document.querySelector('head');
+      let setFavicon = document.createElement('link');
+      setFavicon.setAttribute('rel','shortcut icon');
+      setFavicon.setAttribute('href',favImg);
+      headTitle.appendChild(setFavicon);
+    }
+
+    setFavicon('./images/fallingUpArrow.png');
   </script>
   <script type="module" src="./src/index.js"></script>
   
