@@ -11,6 +11,7 @@ export default class FallingLeftArrow {
     this.game = game;
     this.width = 75
     this.height = 75
+    this.passed = false
 
     // this.position = {
     //   x: 128,
@@ -47,10 +48,12 @@ export default class FallingLeftArrow {
 
   fireLeftArrow() {
     if ((this.leftArrow.position.y - this.position.y) < 38 && (this.leftArrow.position.y - this.position.y) > -38) {
-      this.game.score ++
+      this.game.score += 1
       this.position.y = 2000
+    // } else if ((this.leftArrow.position.y - this.position.y) < 1000 && (this.leftArrow.position.y - this.position.y) > -1000) {
+    //   this.game.score -= 1
     } else {
-      // this.game.score -= 1
+      // console.log(this.game.score)
       // console.log('failure')
     }
   }
@@ -58,6 +61,10 @@ export default class FallingLeftArrow {
   update(deltaTime) {
     this.position.x += this.speed.x;
     this.position.y += this.speed.y;
+
+    if (this.position.y === 670) {
+      this.passed = true;
+    }
   }
 
   handleMissed() {

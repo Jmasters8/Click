@@ -60,9 +60,9 @@ export default class FallingLeftArrow {
   update(deltaTime) {
     this.position.x += this.speed.x;
     this.position.y += this.speed.y;
-    this.score = this.score
-    // if (checkFire(this.game.leftArrow, this) ) {
-    //   console.log('potato')
-    // }
+    
+    if (this.position.y === 670) {
+      this.passed = true;
+    }
   }
 }

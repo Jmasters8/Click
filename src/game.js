@@ -29,7 +29,6 @@ export default class Game {
     this.gameHeight = gameHeight;
     this.gameObjects = [];
     this.score = 0
-    this.missed = 0
     this.gameFrame = 0;
     this.game = this;
     this.gamestate = GAMESTATE.MENU
@@ -40,6 +39,7 @@ export default class Game {
     this.leftArrow = new LeftArrow(this);
     new GameInputHandler(this);
     this.audio = "off"
+    this.missed = []
   }
 
   start() {
@@ -739,6 +739,12 @@ export default class Game {
       object.update(deltaTime)
     })
 
+    this.movingObjects.forEach(object => {
+      if (object.passed && !this.missed.includes(object)) {
+        this.missed.push(object)
+      }
+    })
+
     // this.fallingLeftArrow.update(deltaTime)
     // this.updateFallingLeftArrows(deltaTime)
   }
@@ -828,8 +834,10 @@ export default class Game {
     ctx.font = '30px orbitron';
     // ctx.fillText('Score:', 375, 533);
     // ctx.fillText(this.score, 470, 535);
-    ctx.fillText('Score:', 375, 753);
-    ctx.fillText(this.score, 470, 755);
+    ctx.fillText('Score:', 175, 753);
+    ctx.fillText(this.score, 270, 755);
+    ctx.fillText('Missed:', 555, 753);
+    ctx.fillText(this.missed.length, 650, 755);
     // ctx.fillText('Missed:', 500, 533);
     // ctx.fillText(this.missed, 565, 535)
   }

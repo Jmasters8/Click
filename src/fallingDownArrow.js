@@ -60,6 +60,9 @@ export default class FallingLeftArrow {
   update(deltaTime) {
     this.position.x += this.speed.x;
     this.position.y += this.speed.y;
-    this.score = this.score
+    
+    if (this.position.y === 670) {
+      this.passed = true;
+    }
   }
 }
