@@ -41,7 +41,7 @@
     }
 
     #title {
-      height: 100px;
+      height: 120px;
       color: black;
       text-align: center;
       font-size: 80px;
@@ -49,7 +49,9 @@
 
     #title-text {
       font-family: 'orbitron';
+      text-shadow: 1px 1px 50px rgb(54, 232, 255), 0 0 1em rgb(3, 166, 241), 0 0 0.2em rgb(3, 250, 250);
     }
+
     .wrapper {
       /* background-color: black; */
       /* height: 100vh; */
@@ -62,7 +64,7 @@
 
     #Enter {
       left: 45%;
-      bottom: 4%;
+      bottom: 3.8%;
       position: absolute;
       margin-left: -20px;
       background: none;
@@ -71,18 +73,24 @@
       font-size: 70px;
       font-family: 'orbitron';
       cursor: pointer;
+      /* text-shadow: 10px 10px 10px rgba(0,0,0,.5), 20px 20px 20px rgba(0,0,0,.4), 30px 30px 30px rgba(0,0,0,.1); */
+      text-shadow: 1px 1px 50px rgb(54, 232, 255), 0 0 1em rgb(3, 166, 241), 0 0 0.2em rgb(3, 250, 250);
+    }
+
+    #Enter:hover {
+      text-shadow: 1px 1px 100px rgb(64, 252, 17), 0 0 1em rgb(8, 255, 140), 0 0 0.2em rgb(0, 255, 64);
     }
 
     #instructions {
       position: absolute;
     /* height: 450px; */
-    height: 35%;
+    height: 45%;
     /* width: 60%; */
     width: 30%;
     /* max-width: 660px; */
     /* width: 700px; */
     left: 35%;
-    bottom: 40%;
+    bottom: 30%;
     border: 6px solid black;
     border-radius: 50px;
     visibility: hidden;
@@ -112,6 +120,11 @@
       background: none;
       font-family: 'orbitron';
       cursor: pointer;
+      text-shadow: 1px 1px 2px rgb(54, 232, 255), 0 0 1em rgb(0, 103, 151), 0 0 0.2em rgb(18, 0, 122);
+    }
+
+    #instructions-button:hover {
+      text-shadow: 1px 1px 100px rgb(64, 252, 17), 0 0 1em rgb(8, 255, 140), 0 0 0.2em rgb(0, 255, 64);
     }
 
     #github-logo {
@@ -121,6 +134,7 @@
       position: absolute;
       bottom: 4.5%;
       right: 5%;
+      text-shadow: 1px 1px 2px rgb(54, 232, 255), 0 0 1em rgb(0, 103, 151), 0 0 0.2em rgb(18, 0, 122);
     }
 
   </style>
