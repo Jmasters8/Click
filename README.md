@@ -14,6 +14,7 @@ Click is a JavaScript game where you can flex your key pressing muscles! Based o
 Utilized collision detection functions using position and speed, as well as using keydown event listeners, to detect when a player pressed the key at the correct time. 
 
 ```javascript
+//fallingRightArrow.js
 this.position = position
 this.speed = {
   x: 0,
@@ -34,5 +35,14 @@ fireRightArrow() {
     this.position.y += this.speed.y;
   }
 ```
-
-https://github.com/Jmasters8/Click/blob/6ac950fa2015fd37aed96170bbaa9a5e5de5006a/src/fallingRightArrow.js#L11-L16
+```
+//rightArrowInput.js
+document.addEventListener('keydown', event => {
+      switch (event.keyCode) {
+        case 39:
+          event.preventDefault();
+          fallingRightArrow.fireRightArrow();
+          break;
+      }
+    })
+```
