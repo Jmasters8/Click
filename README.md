@@ -52,4 +52,5 @@ document.addEventListener('keydown', event => {
       }
     })
 ```
-![gameplay](https://media.giphy.com/media/MQJ3WCBxuoe80FMiKM/giphy.gif)
+<img src="https://thumbs.gfycat.com/PessimisticBitesizedChihuahua-size_restricted.gif" width="800" height="600" />
+
