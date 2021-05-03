@@ -7,6 +7,11 @@ Click is a JavaScript game where you can flex your key pressing muscles! Based o
 ## Technologies
  - Vanilla JavaScript to take care of all gameplay functionality
  - Canvas to handle rendering of graphics
+## Instructions
+- Try and click the correct arrow key at the right time (blue falling arrows must line up with the corresponding stationary black arrows)
+- Consecutive arrows in the same direction should be pressed individually (Do not hold down keys)
+- Press spacebar to pause
+- Press esc to end game
 
 ## Functionality
 
@@ -47,3 +52,4 @@ document.addEventListener('keydown', event => {
       }
     })
 ```
+![gameplay](https://media.giphy.com/media/MQJ3WCBxuoe80FMiKM/giphy.gif)
