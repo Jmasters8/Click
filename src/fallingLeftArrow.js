@@ -47,8 +47,6 @@ export default class FallingLeftArrow {
 
   fireLeftArrow() {
     if ((this.leftArrow.position.y - this.position.y) < 38 && (this.leftArrow.position.y - this.position.y) > -38) {
-      // console.log(this.leftArrow.position.y - this.position.y)
-      console.log('success')
       this.game.score ++
       this.position.y = 2000
     } else {
@@ -60,9 +58,6 @@ export default class FallingLeftArrow {
   update(deltaTime) {
     this.position.x += this.speed.x;
     this.position.y += this.speed.y;
-    // if (checkFire(this.game.leftArrow, this) ) {
-    //   console.log('potato')
-    // }
   }
 
   handleMissed() {

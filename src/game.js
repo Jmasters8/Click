@@ -46,7 +46,6 @@ export default class Game {
     this.gamestate = GAMESTATE.RUNNING
     playAudio()
     this.audio = "on"
-    console.log(this.background.display)
     document.getElementById('gameScreen').style.width = 200;
 
 
