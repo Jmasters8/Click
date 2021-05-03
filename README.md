@@ -7,6 +7,11 @@ Click is a JavaScript game where you can flex your key pressing muscles! Based o
 ## Technologies
  - Vanilla JavaScript to take care of all gameplay functionality
  - Canvas to handle rendering of graphics
+## Instructions
+- Try and click the correct arrow key at the right time (blue falling arrows must line up with the corresponding stationary black arrows)
+- Consecutive arrows in the same direction should be pressed individually (Do not hold down keys)
+- Press spacebar to pause
+- Press esc to end game
 
 ## Functionality
 
@@ -22,11 +27,12 @@ this.speed = {
 }
 
 fireRightArrow() {
-    if ((this.rightArrow.position.y - this.position.y) < 38 && (this.rightArrow.position.y - this.position.y) > -38) {
-      this.game.score ++
-      this.position.y = 2000
+    if ((this.rightArrow.position.y - this.position.y) < 38 && 
+       (this.rightArrow.position.y - this.position.y) > -38) {
+       this.game.score ++
+       this.position.y = 2000
     } else {
-      this.game.score --
+       this.game.score --
     }
   }
 
@@ -46,3 +52,12 @@ document.addEventListener('keydown', event => {
       }
     })
 ```
+## Gameplay Clip
+![gameplay](https://thumbs.gfycat.com/PessimisticBitesizedChihuahua-size_restricted.gif)
+
+## Future Implementations
+### Adding Song Lyrics
+Along with the arrows falling down, the player would have to type out the lyrics at the correct time (in sync with the song).
+
+### Adding a variety of songs
+Click consists of only one song, but there will be more to choose from in the future!
