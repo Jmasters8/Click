@@ -26,7 +26,7 @@ export default class FallingLeftArrow {
       this.game.score ++
       this.position.y = 2000
     } else {
-      this.game.score --
+      
     }
   }
 
