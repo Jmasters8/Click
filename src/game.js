@@ -845,9 +845,10 @@ export default class Game {
   reset() {
     this.gamestate = GAMESTATE.MENU;
     this.score = 0;
-    console.log(this.audio)
+    this.missed = [];
     if (this.audio === "on") {
-      playAudio();
+      // playAudio();
+      stopAudio()
       this.audio = "off"
     } else {
       return
