@@ -1,4 +1,3 @@
-import { checkFire } from './checkFire.js'
 
 export default class FallingLeftArrow {
   constructor(game, position, leftArrow) {

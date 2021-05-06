@@ -12,7 +12,11 @@ import LeftArrowInputHandler from './inputHandlers/leftArrowInput.js';
 import UpArrowInputHandler from './inputHandlers/upArrowInput.js';
 import DownArrowInputHandler from './inputHandlers/downArrowInput.js';
 import RightArrowInputHandler from './inputHandlers/rightArrowInput.js';
-import { checkFire } from './checkFire.js'
+import { isMissed } from './isMissed.js'
+import StationaryLeftArrowInputHandler from './inputHandlers/stationaryLeftArrowInput.js';
+import StationaryUpArrowInputHandler from './inputHandlers/stationaryUpArrowInput.js';
+import StationaryDownArrowInputHandler from './inputHandlers/stationaryDownArrowInput.js';
+import StationaryRightArrowInputHandler from './inputHandlers/stationaryRightArrowInput.js';
 
 const GAMESTATE = {
   PAUSED: 0,
@@ -40,6 +44,7 @@ export default class Game {
     new GameInputHandler(this);
     this.audio = "off"
     this.missed = []
+    this.isMissed = isMissed
   }
 
   start() {
@@ -219,6 +224,7 @@ export default class Game {
 
     ];
 
+    new StationaryLeftArrowInputHandler(this.leftArrow, fallingLeftArrows, this)
 
     // for (let i = 1; i < 2; i ++) {
     //   fallingLeftArrows.push(new FallingLeftArrow(this, {x: 108, y: i * -150}, this.leftArrow))
@@ -282,7 +288,7 @@ export default class Game {
       new FallingUpArrow(this, {x: 275, y: -17880}, this.upArrow), //180
       new FallingUpArrow(this, {x: 275, y: -18350}, this.upArrow), //184
       new FallingUpArrow(this, {x: 275, y: -18820}, this.upArrow), //188
-      new FallingUpArrow(this, {x: 275, y: -19200}, this.upArrow), //191 
+      new FallingUpArrow(this, {x: 275, y: -19200}, this.upArrow), //191
       new FallingUpArrow(this, {x: 275, y: -19610}, this.upArrow), //195
       new FallingUpArrow(this, {x: 275, y: -20440}, this.upArrow), //198
       new FallingUpArrow(this, {x: 275, y: -20540}, this.upArrow), //199
@@ -379,10 +385,13 @@ export default class Game {
     // for (let i = 1; i < 2; i++) {
     //   fallingUpArrows.push(new FallingUpArrow(this, {x: 275, y: i * -600}, this.upArrow))
     // }
+    new StationaryUpArrowInputHandler(this.upArrow, fallingUpArrows, this)
+
     fallingUpArrows.forEach(arrow => {
       new UpArrowInputHandler(arrow)
     })
 
+    
 
     let fallingDownArrows = [
       new FallingDownArrow(this, {x: 442, y: -500}, this.downArrow), //3
@@ -524,16 +533,19 @@ export default class Game {
       new FallingDownArrow(this, {x: 442, y: -53240}, this.downArrow), //569
       new FallingDownArrow(this, {x: 442, y: -53750}, this.downArrow), //574
       new FallingDownArrow(this, {x: 442, y: -54480}, this.downArrow) //585
-      
+
     ];
 
 
     // for (let i = 1; i < 2; i++) {
     //   fallingDownArrows.push(new FallingDownArrow(this, {x: 442, y: i * -500}, this.downArrow))
     // }
+    new StationaryDownArrowInputHandler(this.downArrow, fallingDownArrows, this)
+
     fallingDownArrows.forEach(arrow => {
       new DownArrowInputHandler(arrow)
     })
+
 
     let fallingRightArrows = [
       new FallingRightArrow(this, {x: 609, y: -280}, this.rightArrow), //2
@@ -694,17 +706,11 @@ export default class Game {
     // for (let i = 1; i < 2; i++) {
     //   fallingRightArrows.push(new FallingRightArrow(this, {x: 609, y: i * -240}, this.rightArrow))
     // }
-    
+    new StationaryRightArrowInputHandler(this.rightArrow, fallingRightArrows, this)
+
     fallingRightArrows.forEach(arrow => {
       new RightArrowInputHandler(arrow)
     })
-
-
-
-
-
-
-
 
 
     this.movingObjects = [
@@ -800,7 +806,7 @@ export default class Game {
       // ctx.rect(0, 0, this.gameWidth, this.gameHeight);
       // ctx.fillStyle = "rgba(1, 0, 0, 1)";
       // ctx.fill();
-  
+
       // this.background.display = 'none;'
 
       // ctx.font = `30px ${this.arial}`;
@@ -811,7 +817,7 @@ export default class Game {
       ctx.fillText("Press S to Start", this.gameWidth / 2, this.gameHeight / 2)
     }
 
-    
+
   }
 
   togglePause() {
