@@ -55,7 +55,7 @@ export default class Game {
 
 
     let fallingLeftArrows = [
-      new FallingLeftArrow(this, {x: 108, y: -150}, this.leftArrow), //1
+      new FallingLeftArrow(this, {x: 108, y: -130}, this.leftArrow), //1
       new FallingLeftArrow(this, {x: 108, y: -920}, this.leftArrow), //6
       new FallingLeftArrow(this, {x: 108, y: -1400}, this.leftArrow), //9
       new FallingLeftArrow(this, {x: 108, y: -2350}, this.leftArrow), //14
@@ -235,9 +235,9 @@ export default class Game {
 
 
     let fallingUpArrows = [
-      new FallingUpArrow(this, {x: 275, y: -650}, this.upArrow), //4
+      new FallingUpArrow(this, {x: 275, y: -610}, this.upArrow), //4
       new FallingUpArrow(this, {x: 275, y: -1100}, this.upArrow), //7
-      new FallingUpArrow(this, {x: 275, y: -2100}, this.upArrow), //12
+      new FallingUpArrow(this, {x: 275, y: -2070}, this.upArrow), //12
       new FallingUpArrow(this, {x: 275, y: -2500}, this.upArrow), //15
       new FallingUpArrow(this, {x: 275, y: -3030}, this.upArrow), //18
       new FallingUpArrow(this, {x: 275, y: -3100}, this.upArrow), //19
@@ -394,7 +394,7 @@ export default class Game {
     
 
     let fallingDownArrows = [
-      new FallingDownArrow(this, {x: 442, y: -500}, this.downArrow), //3
+      new FallingDownArrow(this, {x: 442, y: -450}, this.downArrow), //3
       new FallingDownArrow(this, {x: 442, y: -1730}, this.downArrow), //11
       new FallingDownArrow(this, {x: 442, y: -2200}, this.downArrow), //13
       new FallingDownArrow(this, {x: 442, y: -3240}, this.downArrow), //21
@@ -548,8 +548,8 @@ export default class Game {
 
 
     let fallingRightArrows = [
-      new FallingRightArrow(this, {x: 609, y: -280}, this.rightArrow), //2
-      new FallingRightArrow(this, {x: 609, y: -800}, this.rightArrow), //5
+      new FallingRightArrow(this, {x: 609, y: -270}, this.rightArrow), //2
+      new FallingRightArrow(this, {x: 609, y: -760}, this.rightArrow), //5
       new FallingRightArrow(this, {x: 609, y: -1250}, this.rightArrow), //8
       new FallingRightArrow(this, {x: 609, y: -1560}, this.rightArrow), //10
       new FallingRightArrow(this, {x: 609, y: -2650}, this.rightArrow), //16
