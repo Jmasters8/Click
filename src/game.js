@@ -45,11 +45,19 @@ export default class Game {
     this.audio = "off"
     this.missed = []
     this.isMissed = isMissed
+    
   }
 
   start() {
+    if (this.gamestate === GAMESTATE.RUNNING) {
+      playAudio()
+      return null
+    } else if (this.gamestate === GAMESTATE.PAUSED) {
+      return null
+    }
     this.gamestate = GAMESTATE.RUNNING
-    playAudio()
+    console.log('starting')
+    // playAudio()
     this.audio = "on"
     document.getElementById('gameScreen').style.width = 200;
 
@@ -221,7 +229,6 @@ export default class Game {
       new FallingLeftArrow(this, {x: 108, y: -54900}, this.leftArrow), //587
       new FallingLeftArrow(this, {x: 108, y: -54950}, this.leftArrow), //587
       new FallingLeftArrow(this, {x: 108, y: -55000}, this.leftArrow) //587
-
     ];
 
     new StationaryLeftArrowInputHandler(this.leftArrow, fallingLeftArrows, this)
@@ -380,6 +387,7 @@ export default class Game {
       new FallingUpArrow(this, {x: 275, y: -54150}, this.upArrow), //582
       new FallingUpArrow(this, {x: 275, y: -54400}, this.upArrow) //584
     ];
+    
 //2
 
     // for (let i = 1; i < 2; i++) {
@@ -394,9 +402,9 @@ export default class Game {
     
 
     let fallingDownArrows = [
-      new FallingDownArrow(this, {x: 442, y: -450}, this.downArrow), //3
-      new FallingDownArrow(this, {x: 442, y: -1730}, this.downArrow), //11
-      new FallingDownArrow(this, {x: 442, y: -2200}, this.downArrow), //13
+      new FallingDownArrow(this, {x: 442, y: -450}, this.downArrow, false), //3
+      new FallingDownArrow(this, {x: 442, y: -1730}, this.downArrow, false), //11
+      new FallingDownArrow(this, {x: 442, y: -2200}, this.downArrow, false), //13
       new FallingDownArrow(this, {x: 442, y: -3240}, this.downArrow), //21
       new FallingDownArrow(this, {x: 442, y: -3310}, this.downArrow), //22
       new FallingDownArrow(this, {x: 442, y: -3380}, this.downArrow), //23
@@ -746,7 +754,10 @@ export default class Game {
     })
 
     this.movingObjects.forEach(object => {
-      if (object.passed && !this.missed.includes(object)) {
+      // if (object.passed && !this.missed.includes(object)) {
+      //   this.missed.push(object)
+      // }
+      if (object.passed === true && !this.missed.includes(object)) {
         this.missed.push(object)
       }
     })
@@ -823,13 +834,13 @@ export default class Game {
   togglePause() {
     if (this.gamestate === GAMESTATE.PAUSED) {
       this.gamestate = GAMESTATE.RUNNING
-      playAudio()
+      // playAudio()
       this.audio = "on"
     } else if (this.gamestate === GAMESTATE.MENU) {
       return;
     } else {
       this.gamestate = GAMESTATE.PAUSED;
-      playAudio()
+      // playAudio()
       this.audio ="off"
     }
   }
@@ -859,6 +870,8 @@ export default class Game {
     } else {
       return
     }
+
+
   }
 
   resetGame() {

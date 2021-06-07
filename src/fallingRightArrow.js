@@ -7,6 +7,7 @@ export default class FallingLeftArrow {
     this.game = game;
     this.width = 75
     this.height = 75
+    this.passed = false
 
     this.position = position
 
@@ -22,15 +23,18 @@ export default class FallingLeftArrow {
   }
 
   fireRightArrow() {
+    if (this.game.gamestate === 0) return null
     if ((this.rightArrow.position.y - this.position.y) < 38 && (this.rightArrow.position.y - this.position.y) > -38) {
       this.game.score ++
       this.position.y = 2000
+      this.position.x = 2000
     } else {
       
     }
   }
 
   update(deltaTime) {
+    this.passed = false;
     this.position.x += this.speed.x;
     this.position.y += this.speed.y;
     

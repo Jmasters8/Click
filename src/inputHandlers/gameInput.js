@@ -13,9 +13,9 @@ export default class GameInputHandler {
           event.preventDefault();
           game.start();
           break;
-        case 27:
-          event.preventDefault();
-          game.reset();
+        // case 27:
+        //   event.preventDefault();
+        //   game.reset();
       }
     })
   }

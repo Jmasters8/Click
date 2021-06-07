@@ -1,6 +1,6 @@
 
 export default class FallingLeftArrow {
-  constructor(game, position, leftArrow) {
+  constructor(game, position, leftArrow, passed) {
     this.image = document.getElementById('fallingDownArrow');
 
     this.gameWidth = game.gameWidth;
@@ -10,6 +10,8 @@ export default class FallingLeftArrow {
     this.game = game;
     this.width = 75
     this.height = 75
+    this.passed = passed
+
 
     // this.position = {
     //   x: 128,
@@ -46,10 +48,12 @@ export default class FallingLeftArrow {
 
 
   fireDownArrow() {
+    if (this.game.gamestate === 0) return null
     if ((this.leftArrow.position.y - this.position.y) < 38 && (this.leftArrow.position.y - this.position.y) > -38) {
       // console.log(this.leftArrow.position.y - this.position.y)
       this.game.score ++
       this.position.y = 2000
+      this.position.x = 2000
     } else {
       // console.log('failure')
       
@@ -57,11 +61,13 @@ export default class FallingLeftArrow {
   }
 
   update(deltaTime) {
+    let logged = false
     this.position.x += this.speed.x;
     this.position.y += this.speed.y;
     
     if (this.position.y === 670) {
       this.passed = true;
     }
+    
   }
 }

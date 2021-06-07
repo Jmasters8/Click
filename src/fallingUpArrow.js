@@ -10,6 +10,7 @@ export default class FallingLeftArrow {
     this.game = game;
     this.width = 75
     this.height = 75
+    this.passed = false
 
     // this.position = {
     //   x: 128,
@@ -46,11 +47,13 @@ export default class FallingLeftArrow {
 
 
   fireUpArrow() {
+    if (this.game.gamestate === 0) return null
     if ((this.leftArrow.position.y - this.position.y) < 38 && (this.leftArrow.position.y - this.position.y) > -38) {
       // console.log(this.leftArrow.position.y - this.position.y)
       // console.log('success')
       this.game.score ++
       this.position.y = 2000
+      this.position.x = 2000
     } else {
       // this.game.missed += 1
     }

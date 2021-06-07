@@ -4,7 +4,7 @@ export default class StationaryDownArrowInputHandler {
       switch (event.keyCode) {
         case 40:
           event.preventDefault();
-          if (game.isMissed(downArrow, fallingDownArrows)) game.missed.push('potato')
+          if (game.isMissed(downArrow, fallingDownArrows) && game.gamestate === 1) game.missed.push('potato')
           break;
       }
     })
