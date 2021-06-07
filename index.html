@@ -211,7 +211,8 @@
   onClick="document.getElementById('instructions').style.visibility = 'hidden'">
     Enter
   </button>
-  <button id="instructions-button" onClick="document.getElementById('instructions').style.visibility = 'visible'">
+  <!-- <button id="instructions-button" onClick="document.getElementById('instructions').style.visibility = 'visible'"> -->
+    <button id="instructions-button" onClick="showInstructions()">
     Instructions & Controls
   </button>
   <div id="instructions">
@@ -244,16 +245,21 @@
   </div>
   <script>
     function showInstructions() {
-      let gameScreen = document.querySelector('#gameScreen')
-      let instructions = document.querySelector('#instructions')
-      let instructionStyles = getComputedStyle(instructions)
-      let gameStyles = getComputedStyle(gameScreen)
-      if (gameStyles.visibility === 'visible') {
-        instructionStyles.visibility = 'hidden';
+      let instructions = document.getElementById('instructions')
+      let gameScreen = document.getElementById('gameScreen')
+      if (instructions.style.visibility === "hidden" || instructions.style.visibility === "") {
+        instructions.style.visibility = "visible"
       } else {
-        instructionStyles.visibility = 'visible'
+        instructions.style.visibility = "hidden"
+      }
+
+      if (gameScreen.style.visibility === "visible") {
+        instructions.style.backgroundColor = "white"
+        instructions.style.zIndex = "999"
       }
     }
+
+    
     
   </script>
 
