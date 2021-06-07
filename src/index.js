@@ -7,8 +7,8 @@ const GAME_HEIGHT = 800;
 let score = 0;
 
 let game = new Game(GAME_WIDTH, GAME_HEIGHT, score)
-
 let lastTime = 0;
+let playAgain = document.getElementById("play-again")
 
 document.addEventListener("keydown", e => {
   if (e.keyCode === 27) {
@@ -20,9 +20,18 @@ document.addEventListener("keydown", e => {
     playAudio()
   }
 
-  if (e.keyCode === 32) {
-    playAudio()
-  }
+  // if (e.keyCode === 32) {
+  //   playAudio()
+  // }
+
+  // if (e.keyCode === 83) {
+  //   game = new Game(GAME_WIDTH, GAME_HEIGHT, score)
+  // }
+})
+
+
+playAgain.addEventListener("mousedown", e => {
+  game = new Game(GAME_WIDTH, GAME_HEIGHT, score)
 })
 
 

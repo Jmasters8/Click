@@ -49,6 +49,7 @@ export default class Game {
   }
 
   start() {
+    
     if (this.gamestate === GAMESTATE.RUNNING) {
       playAudio()
       return null
@@ -56,7 +57,7 @@ export default class Game {
       return null
     }
     this.gamestate = GAMESTATE.RUNNING
-    console.log('starting')
+    // console.log(this.gamestate)
     // playAudio()
     this.audio = "on"
     document.getElementById('gameScreen').style.width = 200;
@@ -747,7 +748,7 @@ export default class Game {
 
   update(deltaTime) {
 
-    if (this.gamestate === GAMESTATE.PAUSED || this.gamestate === GAMESTATE.MENU) return;
+    if (this.gamestate === GAMESTATE.PAUSED || this.gamestate === GAMESTATE.MENU || this.gamestate === GAMESTATE.GAMEOVER) return;
 
     this.movingObjects.forEach(object => {
       object.update(deltaTime)
@@ -761,6 +762,14 @@ export default class Game {
         this.missed.push(object)
       }
     })
+
+    if (this.missed.length === 25) {
+      this.gamestate = GAMESTATE.GAMEOVER
+      
+      this.missed = []
+      stopAudio()
+      document.getElementById("play-again").style.display = "block"
+    }
 
     // this.fallingLeftArrow.update(deltaTime)
     // this.updateFallingLeftArrows(deltaTime)
@@ -802,7 +811,7 @@ export default class Game {
       object.draw(ctx)
     })
 
-    if (this.gamestate === GAMESTATE.PAUSED) {
+    if (this.gamestate === GAMESTATE.GAMEOVER) {
       ctx.rect(0, 0, this.gameWidth, this.gameHeight);
       ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
       ctx.fill();
@@ -810,7 +819,7 @@ export default class Game {
       ctx.font = "30px orbitron";
       ctx.fillStyle = "black";
       ctx.textAlign = "center";
-      ctx.fillText("Paused", this.gameWidth / 2, this.gameHeight / 2)
+      // ctx.fillText("Paused", this.gameWidth / 2, this.gameHeight / 2)
     }
 
     if (this.gamestate === GAMESTATE.MENU) {

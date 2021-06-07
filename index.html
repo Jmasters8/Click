@@ -88,6 +88,27 @@
       text-shadow: 1px 1px 100px rgb(64, 252, 17), 0 0 1em rgb(8, 255, 140), 0 0 0.2em rgb(0, 255, 64);
     }
 
+    #play-again {
+      left: 42%;
+      bottom: 53%;
+      position: absolute;
+      margin-left: -20px;
+      background: none;
+      border: none;
+      outline: none;
+      font-size: 30px;
+      font-family: 'orbitron';
+      cursor: pointer;
+      /* text-shadow: 10px 10px 10px rgb(0 0 0 / 50%), 20px 20px 20px rgb(0 0 0 / 40%), 30px 30px 30px rgb(0 0 0 / 10%); */
+      text-shadow: 1px 1px 2px rgb(54 232 255), 0 0 1em rgb(0 103 151), 0 0 0.2em rgb(18 0 122);
+      display: none;
+      z-index: 999;
+    }
+
+    #play-again:hover {
+      text-shadow: 1px 1px 100px rgb(64, 252, 17), 0 0 1em rgb(8, 255, 140), 0 0 0.2em rgb(0, 255, 64);
+    }
+
     #instructions {
       position: absolute;
     /* height: 450px; */
@@ -211,6 +232,7 @@
   onClick="document.getElementById('instructions').style.visibility = 'hidden'">
     Enter
   </button>
+  <button id="play-again" onClick="document.getElementById('play-again').style.display = 'none' ">Play Again</button>
   <!-- <button id="instructions-button" onClick="document.getElementById('instructions').style.visibility = 'visible'"> -->
     <button id="instructions-button" onClick="showInstructions()">
     Instructions & Controls
@@ -225,8 +247,11 @@
         Consecutive arrows in the same direction should be pressed individually (Do not hold down keys)
       </li>
       <li>
-        Press spacebar to pause
+        Maximum misses allowed: 25
       </li>
+      <!-- <li>
+        Press spacebar to pause
+      </li> -->
       <li>
         Press esc to return to the main menu
       </li>

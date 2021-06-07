@@ -6,9 +6,9 @@ export default class GameInputHandler {
         // case 37:
         //   fallingLeftArrow.fire()
         //   break;
-        case 32:
-          game.togglePause();
-          break;
+        // case 32:
+        //   game.togglePause();
+        //   break;
         case 83:
           event.preventDefault();
           game.start();
