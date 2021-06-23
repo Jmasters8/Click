@@ -42,6 +42,9 @@
 
     #gameScreen {
       border: 2px solid black;
+      grid-column-start: 1;
+      grid-row-start: 1;
+      grid-column-end: 4;
       /* display: none; */
       display: block;
       visibility: hidden;
@@ -51,6 +54,10 @@
       border-radius: 50px;
       position: relative;
   
+    }
+
+    .wrapper {
+      display: grid;
     }
 
     #title {
@@ -89,10 +96,12 @@
     }
 
     #play-again {
-      left: 42%;
-      bottom: 53%;
-      position: absolute;
-      margin-left: -20px;
+      /* left: 42%; */
+      grid-column-start: 2;
+      grid-row-start: 1;
+      /* bottom: 53%; */
+      /* position: absolute;
+      margin-left: -20px; */
       background: none;
       border: none;
       outline: none;
@@ -232,7 +241,7 @@
   onClick="document.getElementById('instructions').style.visibility = 'hidden'">
     Enter
   </button>
-  <button id="play-again" onClick="document.getElementById('play-again').style.display = 'none' ">Play Again</button>
+  <!-- <button id="play-again" onClick="document.getElementById('play-again').style.display = 'none' ">Play Again</button> -->
   <!-- <button id="instructions-button" onClick="document.getElementById('instructions').style.visibility = 'visible'"> -->
     <button id="instructions-button" onClick="showInstructions()">
     Instructions & Controls
@@ -267,6 +276,7 @@
   
   <div class="wrapper" background-color="blue">
     <canvas id="gameScreen" width="800" height="800"></canvas>
+    <button id="play-again" onClick="document.getElementById('play-again').style.display = 'none' ">Play Again</button>
   </div>
   <script>
     function showInstructions() {
