@@ -51,7 +51,7 @@ export default class Game {
   start() {
     
     if (this.gamestate === GAMESTATE.RUNNING) {
-      playAudio()
+      // playAudio()
       return null
     } else if (this.gamestate === GAMESTATE.PAUSED) {
       return null

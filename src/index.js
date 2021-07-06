@@ -9,15 +9,20 @@ let score = 0;
 let game = new Game(GAME_WIDTH, GAME_HEIGHT, score)
 let lastTime = 0;
 let playAgain = document.getElementById("play-again")
+let audioOn = false
 
 document.addEventListener("keydown", e => {
+  let gameScreen = document.getElementById('gameScreen')
   if (e.keyCode === 27) {
-    console.log("reset")
+    audioOn = false
     game = new Game(GAME_WIDTH, GAME_HEIGHT, score)
     stopAudio()
   }
-  if (e.keyCode === 83) {
+
+  if (e.keyCode === 83 && gameScreen.style.visibility === "visible") {
+    if (audioOn === true) return null
     playAudio()
+    audioOn = true
   }
 
   // if (e.keyCode === 32) {
@@ -27,6 +32,15 @@ document.addEventListener("keydown", e => {
   // if (e.keyCode === 83) {
   //   game = new Game(GAME_WIDTH, GAME_HEIGHT, score)
   // }
+})
+
+document.addEventListener("click", e => {
+  let ele = document.getElementById("Enter")
+  if (e.target === ele && ele.innerHTML === "Enter") {
+    game = new Game(GAME_WIDTH, GAME_HEIGHT, score)
+    stopAudio()
+    audioOn = false
+  }
 })
 
 

@@ -237,8 +237,12 @@
       Click
     </div>
   </div>
-  <button id="Enter" onClick="document.getElementById('gameScreen').style.visibility = 'visible'"
-  onClick="document.getElementById('instructions').style.visibility = 'hidden'">
+  <!-- <button id="Enter" onClick="document.getElementById('gameScreen').style.visibility = 'visible'"
+  onClick="document.getElementById('instructions').style.visibility = 'hidden'"
+  onClick="document.getElementById('Enter').innerHTML = 'Exit'"
+  onClick=""
+  > -->
+  <button id="Enter" onClick=enter()>
     Enter
   </button>
   <!-- <button id="play-again" onClick="document.getElementById('play-again').style.display = 'none' ">Play Again</button> -->
@@ -297,6 +301,22 @@
     
     
   </script>
+
+  <script>
+    function enter() {
+      document.getElementById('gameScreen').style.visibility = 'visible'
+      document.getElementById('instructions').style.visibility = 'hidden'
+      let enterOrExit = document.getElementById('Enter').innerHTML
+
+      if (document.getElementById('Enter').innerHTML === 'Exit') {
+        document.getElementById('Enter').innerHTML = 'Enter'
+        document.getElementById('gameScreen').style.visibility = 'hidden'
+      } else if (document.getElementById('Enter').innerHTML === 'Enter' || document.getElementById('Enter').innerHTML === enterOrExit) {
+        document.getElementById('Enter').innerHTML = 'Exit'
+      }
+    }
+  </script>
+
 
   <script allow="autoplay" playsinline="true" autoplay="" muted="muted">
     let audio = new Audio('./songs/Cascada.mp3');
