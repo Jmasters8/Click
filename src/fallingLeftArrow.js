@@ -11,39 +11,20 @@ export default class FallingLeftArrow {
     this.width = 75
     this.height = 75
     this.passed = false
-
-    // this.position = {
-    //   x: 128,
-    //   y: -20
-    // }
-
     this.position = position
 
     this.speed = {
       x: 0,
       y: 2
     }
-    // this.reset();
 
   }
 
-  // reset() {
-  //   this.position = {
-  //     x: 128,
-  //     y: -20
-  //   }
-
-  //   this.speed = {
-  //     x: 0,
-  //     y: 2
-  //   }
-  // }
 
   draw(ctx) {
-    // ctx.fillRect(this.position.x, this.position.y, this.width, this.height)
+
     ctx.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
   }
-
 
   fireLeftArrow() {
     if (this.game.gamestate === 0) return null
@@ -51,10 +32,7 @@ export default class FallingLeftArrow {
       this.game.score += 1
       this.position.y = 2000
       this.position.x = 2000
-    // } else if ((this.leftArrow.position.y - this.position.y) < 1000 && (this.leftArrow.position.y - this.position.y) > -1000) {
-    //   this.game.score -= 1
     } else {
-      // console.log(this.game.score)
       // console.log('failure')
     }
   }

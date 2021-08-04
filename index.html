@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta property="og:title" content="Click" />
-  <!-- <meta property="og:image" content="./images/clicklinkedinimg.png" /> -->
   <meta property="og:image" content="https://i.imgur.com/tMflrYK.png" />
-  <meta
-    property="og:description"
-    content="Click is a JavaScript game where you can flex your clicking muscles! Based on the classic game, Dance Dance Revolution, Click consists of falling arrows that match the beat to a song, and must be pressed at the correct time"
-  />
-  <meta
-    property="og:url"
-    content="https://jmasters8.github.io/Click/"
-  />
+  <meta property="og:description"
+    content="Click is a JavaScript game where you can flex your clicking muscles! Based on the classic game, Dance Dance Revolution, Click consists of falling arrows that match the beat to a song, and must be pressed at the correct time" />
+  <meta property="og:url" content="https://jmasters8.github.io/Click/" />
 
   <title>Click</title>
   <style>
@@ -22,15 +17,13 @@
   </style>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Permanent+Marker&display=swap');
-    </style>
+  </style>
   <style>
-
     html {
       height: 100%;
       width: 100%;
       background: black;
       background: url('https://st2.depositphotos.com/1310390/8819/v/600/depositphotos_88196206-stock-illustration-show-or-dance-floor-vector.jpg');
-      /* background-position: center; */
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -45,7 +38,6 @@
       grid-column-start: 1;
       grid-row-start: 1;
       grid-column-end: 4;
-      /* display: none; */
       display: block;
       visibility: hidden;
       margin: auto;
@@ -53,7 +45,7 @@
       background-size: cover;
       border-radius: 50px;
       position: relative;
-  
+
     }
 
     .wrapper {
@@ -87,7 +79,6 @@
       font-size: 70px;
       font-family: 'orbitron';
       cursor: pointer;
-      /* text-shadow: 10px 10px 10px rgba(0,0,0,.5), 20px 20px 20px rgba(0,0,0,.4), 30px 30px 30px rgba(0,0,0,.1); */
       text-shadow: 1px 1px 2px rgb(54, 232, 255), 0 0 1em rgb(0, 103, 151), 0 0 0.2em rgb(18, 0, 122);
     }
 
@@ -96,19 +87,14 @@
     }
 
     #play-again {
-      /* left: 42%; */
       grid-column-start: 2;
       grid-row-start: 1;
-      /* bottom: 53%; */
-      /* position: absolute;
-      margin-left: -20px; */
       background: none;
       border: none;
       outline: none;
       font-size: 30px;
       font-family: 'orbitron';
       cursor: pointer;
-      /* text-shadow: 10px 10px 10px rgb(0 0 0 / 50%), 20px 20px 20px rgb(0 0 0 / 40%), 30px 30px 30px rgb(0 0 0 / 10%); */
       text-shadow: 1px 1px 2px rgb(54 232 255), 0 0 1em rgb(0 103 151), 0 0 0.2em rgb(18 0 122);
       display: none;
       z-index: 999;
@@ -120,29 +106,30 @@
 
     #instructions {
       position: absolute;
-    /* height: 450px; */
-    height: 45%;
-    /* width: 60%; */
-    width: 30%;
-    /* max-width: 660px; */
-    /* width: 700px; */
-    left: 35%;
-    bottom: 30%;
-    border: 6px solid black;
-    border-radius: 50px;
-    visibility: hidden;
-    font-family: 'orbitron';
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.2);
+
+      height: 45%;
+
+      width: 30%;
+
+      left: 35%;
+      bottom: 30%;
+      border: 6px solid black;
+      border-radius: 50px;
+      visibility: hidden;
+      font-family: 'orbitron';
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.2);
     }
 
-    #instructions > h1 {
+    #instructions>h1 {
       text-decoration: underline;
       text-shadow: 1px 1px 2px rgb(54, 232, 255), 0 0 1em rgb(0, 103, 151), 0 0 0.2em rgb(18, 0, 122);
     }
+
     #instructions ol {
       text-align: left;
     }
+
     #instructions li {
       padding: 5px;
       font-size: 19px;
@@ -172,10 +159,7 @@
       position: absolute;
       bottom: 4.5%;
       right: 11%;
-      /* box-shadow: 1px 1px 2px rgb(54, 232, 255), 0 0 1em rgb(0, 103, 151), 0 0 0.2em rgb(18, 0, 122); */
-      filter: drop-shadow(1px 0px 0px rgb(54, 232, 255))
-              drop-shadow(0px 1px 2px rgb(0, 103, 151))
-              drop-shadow(0px 0px 2px rgb(18, 0, 122))
+      filter: drop-shadow(1px 0px 0px rgb(54, 232, 255)) drop-shadow(0px 1px 2px rgb(0, 103, 151)) drop-shadow(0px 0px 2px rgb(18, 0, 122))
     }
 
     #linkedin-logo {
@@ -185,22 +169,15 @@
       position: absolute;
       bottom: 5.2%;
       right: 4%;
-      /* box-shadow: 1px 1px 2px rgb(54, 232, 255), 0 0 1em rgb(0, 103, 151), 0 0 0.2em rgb(18, 0, 122); */
-      filter: drop-shadow(1px 0px 0px rgb(54, 232, 255))
-              drop-shadow(0px 1px 2px rgb(0, 103, 151))
-              drop-shadow(0px 0px 2px rgb(18, 0, 122))
+      filter: drop-shadow(1px 0px 0px rgb(54, 232, 255)) drop-shadow(0px 1px 2px rgb(0, 103, 151)) drop-shadow(0px 0px 2px rgb(18, 0, 122))
     }
-    
+
     #github-logo:hover {
-      filter: drop-shadow(1px 0px 0px rgb(64, 252, 17))
-              drop-shadow(0px 1px 0px rgb(8, 255, 140))
-              drop-shadow(1px 0px 8px rgb(0, 255, 64))
+      filter: drop-shadow(1px 0px 0px rgb(64, 252, 17)) drop-shadow(0px 1px 0px rgb(8, 255, 140)) drop-shadow(1px 0px 8px rgb(0, 255, 64))
     }
 
     #linkedin-logo:hover {
-      filter: drop-shadow(1px 0px 0px rgb(64, 252, 17))
-              drop-shadow(0px 1px 0px rgb(8, 255, 140))
-              drop-shadow(1px 0px 8px rgb(0, 255, 64))
+      filter: drop-shadow(1px 0px 0px rgb(64, 252, 17)) drop-shadow(0px 1px 0px rgb(8, 255, 140)) drop-shadow(1px 0px 8px rgb(0, 255, 64))
     }
 
     @media only screen and (max-height: 1035px) {
@@ -215,46 +192,42 @@
         right: 3.8%;
       }
     }
-
   </style>
 </head>
+
 <body>
 
   <img id="leftArrow" src="./images/leftarrow.png">
   <img id="upArrow" src="./images/uparrow.png">
-  <img id="downArrow" src="./images/downarrow.png" >
-  <img id="rightArrow" src="./images/rightarrow.png" >
-  
+  <img id="downArrow" src="./images/downarrow.png">
+  <img id="rightArrow" src="./images/rightarrow.png">
+
 
   <img id="fallingLeftArrow" src="./images/fallingLeftArrow.png">
   <img id="fallingUpArrow" src="./images/fallingUpArrow.png">
   <img id="fallingDownArrow" src="./images/fallingDownArrow.png">
   <img id="fallingRightArrow" src="./images/fallingRightArrow.png">
 
-  
+
   <div id="title">
     <div id=title-text>
       Click
     </div>
   </div>
-  <!-- <button id="Enter" onClick="document.getElementById('gameScreen').style.visibility = 'visible'"
-  onClick="document.getElementById('instructions').style.visibility = 'hidden'"
-  onClick="document.getElementById('Enter').innerHTML = 'Exit'"
-  onClick=""
-  > -->
+
   <button id="Enter" onClick=enter()>
     Enter
   </button>
-  <!-- <button id="play-again" onClick="document.getElementById('play-again').style.display = 'none' ">Play Again</button> -->
-  <!-- <button id="instructions-button" onClick="document.getElementById('instructions').style.visibility = 'visible'"> -->
-    <button id="instructions-button" onClick="showInstructions()">
+
+  <button id="instructions-button" onClick="showInstructions()">
     Instructions & Controls
   </button>
   <div id="instructions">
     <h1>Instructions & Controls</h1>
     <ol>
       <li>
-        Try and click the correct arrow key at the right time (blue falling arrows must line up with corresponding stationary black arrows)
+        Try and click the correct arrow key at the right time (blue falling arrows must line up with corresponding
+        stationary black arrows)
       </li>
       <li>
         Consecutive arrows in the same direction should be pressed individually (Do not hold down keys)
@@ -277,7 +250,7 @@
   <a href="https://www.linkedin.com/in/jason-masters8/" target='_blank'>
     <img id="linkedin-logo" src="./images/linkedin.png">
   </a>
-  
+
   <div class="wrapper" background-color="blue">
     <canvas id="gameScreen" width="800" height="800"></canvas>
     <button id="play-again" onClick="document.getElementById('play-again').style.display = 'none' ">Play Again</button>
@@ -298,8 +271,8 @@
       }
     }
 
-    
-    
+
+
   </script>
 
   <script>
@@ -339,17 +312,18 @@
 
   </script>
   <script>
-    function setFavicon(favImg){
+    function setFavicon(favImg) {
       let headTitle = document.querySelector('head');
       let setFavicon = document.createElement('link');
-      setFavicon.setAttribute('rel','shortcut icon');
-      setFavicon.setAttribute('href',favImg);
+      setFavicon.setAttribute('rel', 'shortcut icon');
+      setFavicon.setAttribute('href', favImg);
       headTitle.appendChild(setFavicon);
     }
 
     setFavicon('./images/fallingUpArrow.png');
   </script>
   <script type="module" src="./src/index.js"></script>
-  
+
 </body>
+
 </html>

@@ -25,13 +25,6 @@ document.addEventListener("keydown", e => {
     audioOn = true
   }
 
-  // if (e.keyCode === 32) {
-  //   playAudio()
-  // }
-
-  // if (e.keyCode === 83) {
-  //   game = new Game(GAME_WIDTH, GAME_HEIGHT, score)
-  // }
 })
 
 document.addEventListener("click", e => {

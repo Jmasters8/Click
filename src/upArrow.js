@@ -5,10 +5,6 @@ export default class UpArrow {
 
     this.image = document.getElementById("upArrow");
 
-    // this.position = {
-    //   x: 350,
-    //   y: 800
-    // }
     this.position = {
       x: 275,
       y: 613
@@ -17,7 +13,6 @@ export default class UpArrow {
   }
 
   draw(ctx) {
-    // ctx.fillRect(this.position.x, this.position.y, this.width, this.height)
     ctx.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
   }
 }
