@@ -106,11 +106,8 @@
 
     #instructions {
       position: absolute;
-
       height: 45%;
-
       width: 30%;
-
       left: 35%;
       bottom: 30%;
       border: 6px solid black;
@@ -119,6 +116,11 @@
       font-family: 'orbitron';
       text-align: center;
       background-color: rgba(255, 255, 255, 0.2);
+      overflow: scroll;
+    }
+
+    #instructions::-webkit-scrollbar {
+      display: none;
     }
 
     #instructions>h1 {
