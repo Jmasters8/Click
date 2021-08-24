@@ -1,7 +1,6 @@
 export function isMissed(arrow, fallingArrows) {
   let arrowPosition = arrow.position.y
   let missed = true
-  let exit = false
 
   fallingArrows.forEach(fallingArrow => {
     
