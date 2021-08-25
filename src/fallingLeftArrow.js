@@ -32,9 +32,7 @@ export default class FallingLeftArrow {
       this.game.score += 1
       this.position.y = 2000
       this.position.x = 2000
-    } else {
-      // console.log('failure')
-    }
+    } 
   }
 
   update(deltaTime) {
