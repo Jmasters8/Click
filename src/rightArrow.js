@@ -1,5 +1,5 @@
 export default class RightArrow {
-  constructor(gameWidth, gameHeight) {
+  constructor() {
     this.width = 80
     this.height = 80
 

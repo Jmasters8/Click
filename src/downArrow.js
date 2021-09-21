@@ -1,5 +1,5 @@
 export default class DownArrow {
-  constructor(gameWidth, gameHeight) {
+  constructor() {
     this.width = 80
     this.height = 80
     this.image = document.getElementById("downArrow");
