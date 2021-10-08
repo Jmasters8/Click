@@ -783,11 +783,13 @@ export default class Game {
   togglePause() {
     if (this.gamestate === GAMESTATE.PAUSED) {
       this.gamestate = GAMESTATE.RUNNING
+      playAudio();
       this.audio = "on"
     } else if (this.gamestate === GAMESTATE.MENU) {
       return;
     } else {
       this.gamestate = GAMESTATE.PAUSED;
+      stopAudio();
       this.audio = "off"
     }
   }

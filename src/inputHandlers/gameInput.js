@@ -6,6 +6,7 @@ export default class GameInputHandler {
       switch (event.keyCode) {
         case 32:
           event.preventDefault();
+          game.togglePause();
           break;
         case 83:
           event.preventDefault();
