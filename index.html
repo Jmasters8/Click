@@ -49,7 +49,7 @@
     }
 
     .wrapper {
-      display: grid;
+      /* display: grid; */
     }
 
     #title {
@@ -65,6 +65,19 @@
     }
 
     img {
+      display: none;
+    }
+
+    #controls {
+      position: absolute;
+      font-family: 'orbitron';
+      right: 56%;
+      bottom: 12%;
+      background: none;
+      border: none;
+      outline: none;
+      font-size: 25px;
+      text-shadow: 1px 1px 2px rgb(54, 232, 255), 0 0 1em rgb(0, 103, 151), 0 0 0.2em rgb(18, 0, 122);
       display: none;
     }
 
@@ -252,8 +265,13 @@
 
   <div class="wrapper" background-color="blue">
     <canvas id="gameScreen" width="800" height="800"></canvas>
+    <!-- <div id="controls">
+      Press Esc to restart
+    </div> -->
     <button id="play-again" onClick="document.getElementById('play-again').style.display = 'none' ">Play Again</button>
+
   </div>
+
   <script>
     function showInstructions() {
       let instructions = document.getElementById('instructions')
@@ -283,8 +301,10 @@
       if (document.getElementById('Enter').innerHTML === 'Exit') {
         document.getElementById('Enter').innerHTML = 'Enter'
         document.getElementById('gameScreen').style.visibility = 'hidden'
+        // document.getElementById('controls').style.display = 'none'
       } else if (document.getElementById('Enter').innerHTML === 'Enter' || document.getElementById('Enter').innerHTML === enterOrExit) {
         document.getElementById('Enter').innerHTML = 'Exit'
+        // document.getElementById('controls').style.display = 'block'
       }
     }
   </script>
@@ -305,7 +325,7 @@
     }
 
     function resumeAudio() {
-      
+
     }
 
     function stopAudio() {
