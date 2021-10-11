@@ -789,7 +789,7 @@ export default class Game {
       return;
     } else {
       this.gamestate = GAMESTATE.PAUSED;
-      stopAudio();
+      playAudio();
       this.audio = "off"
     }
   }
