@@ -39,6 +39,7 @@ document.addEventListener("click", e => {
 
 playAgain.addEventListener("mousedown", e => {
   game = new Game(GAME_WIDTH, GAME_HEIGHT, score)
+  audioOn = false;
 })
 
 
