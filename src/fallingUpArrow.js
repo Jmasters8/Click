@@ -15,7 +15,7 @@ export default class FallingLeftArrow {
 
     this.speed = {
       x: 0,
-      y: 2
+      y: 1.2
     }
     
   }
@@ -31,7 +31,7 @@ export default class FallingLeftArrow {
     if ((this.leftArrow.position.y - this.position.y) < 38 && (this.leftArrow.position.y - this.position.y) > -38) {
 
       this.game.score ++
-      this.position.y = 2000
+      this.position.y = -2000
       this.position.x = 2000
     } 
   }
@@ -40,7 +40,7 @@ export default class FallingLeftArrow {
     this.position.x += this.speed.x;
     this.position.y += this.speed.y;
     
-    if (this.position.y === 670) {
+    if (this.position.y >= 670) {
       this.passed = true;
     }
   }
