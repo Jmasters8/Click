@@ -774,7 +774,7 @@ export default class Game {
       ctx.font = "30px orbitron";
       ctx.fillStyle = "black";
       ctx.textAlign = "center";
-      ctx.fillText("Press S to Start", this.gameWidth / 2, this.gameHeight / 2)
+      ctx.fillText("Press S to tart", this.gameWidth / 2, this.gameHeight / 2)
     }
 
 

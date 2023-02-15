@@ -38,7 +38,7 @@ export default class FallingLeftArrow {
     this.position.x += this.speed.x;
     this.position.y += this.speed.y;
     
-    if (this.position.y >= 670) {
+    if (this.position.y > 670 && this.position.y < 680) {
       this.passed = true;
     }
   }
