@@ -26,7 +26,7 @@ export default class FallingLeftArrow {
     if (this.game.gamestate === 0) return null
     if ((this.rightArrow.position.y - this.position.y) < 38 && (this.rightArrow.position.y - this.position.y) > -38) {
       this.game.score ++
-      this.position.y = -2000
+      this.position.y = 2000
       this.position.x = 2000
     } else {
       
