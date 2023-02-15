@@ -743,13 +743,13 @@ export default class Game {
       }
     })
 
-    if (this.missed.length === 25) {
-      this.gamestate = GAMESTATE.GAMEOVER
+    // if (this.missed.length === 25) {
+    //   this.gamestate = GAMESTATE.GAMEOVER
 
-      this.missed = []
-      stopAudio()
-      document.getElementById("play-again").style.display = "block"
-    }
+    //   this.missed = []
+    //   stopAudio()
+    //   document.getElementById("play-again").style.display = "block"
+    // }
 
   }
 
